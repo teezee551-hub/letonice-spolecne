@@ -1,0 +1,772 @@
+/* ============================================================
+   LETONICE SPOLEČNĚ — komunální volby 2026
+   Paleta: papír / hodová vínová / zlatá (mašle na kroji)
+   ============================================================ */
+
+:root {
+  --paper: #F8F4EC;
+  --paper-2: #F0E9DC;
+  --ink: #271A1C;
+  --ink-soft: #5D4A4E;
+  --wine: #7E2438;
+  --wine-deep: #4E1420;
+  --wine-mid: #A34D5E;
+  --blush: #F0E0DA;
+  --gold: #E8AC3B;
+  --gold-deep: #C4880F;
+  --white: #FFFFFF;
+  --line: rgba(39, 26, 28, 0.14);
+
+  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", "Consolas", monospace;
+
+  --w-content: 1120px;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --radius: 14px;
+  --shadow: 0 10px 30px -12px rgba(78, 20, 32, 0.28);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg { display: block; max-width: 100%; }
+
+a { color: var(--wine); }
+
+:focus-visible {
+  outline: 3px solid var(--gold-deep);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.wrap {
+  max-width: var(--w-content);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* ---------- typografie ---------- */
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--wine);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 26px;
+  height: 2px;
+  background: var(--gold);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+h2 {
+  font-size: clamp(1.9rem, 4.2vw, 2.9rem);
+  font-weight: 700;
+  margin: 0.9rem 0 1rem;
+}
+
+.section-lead {
+  max-width: 46ch;
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+}
+
+/* ---------- navigace ---------- */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-block: 0.8rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  color: var(--ink);
+  margin-right: auto;
+}
+
+.brand-mark { width: 38px; height: 38px; flex: none; }
+
+.brand-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.02rem;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+}
+
+.brand-name small {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--wine);
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.4rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--ink-soft);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding-block: 0.4rem;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.nav-links a:hover { color: var(--wine-deep); border-color: var(--gold); }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.45rem 0.6rem;
+  font-size: 1.15rem;
+  line-height: 1;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+/* ---------- tlačítka ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.85rem 1.6rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+.btn:hover { transform: translateY(-2px); }
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--ink);
+  box-shadow: 0 6px 18px -6px rgba(196, 136, 15, 0.6);
+}
+
+.btn-primary:hover { background: var(--gold-deep); }
+
+.btn-ghost {
+  border-color: var(--wine);
+  color: var(--wine);
+  background: transparent;
+}
+
+.btn-ghost:hover { background: var(--blush); }
+
+.btn-sm { padding: 0.55rem 1.1rem; font-size: 0.9rem; }
+
+/* ---------- hero ---------- */
+
+.hero {
+  position: relative;
+  background:
+    radial-gradient(1100px 500px at 78% -10%, rgba(126, 36, 56, 0.12), transparent 65%),
+    var(--paper);
+  overflow: hidden;
+}
+
+.hero-inner {
+  padding-block: clamp(4rem, 9vw, 7.5rem) clamp(9rem, 16vw, 13rem);
+  max-width: 780px;
+}
+
+.hero h1 {
+  font-size: clamp(2.7rem, 7.2vw, 5.2rem);
+  font-weight: 800;
+  margin: 1.1rem 0 1.3rem;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--wine);
+  position: relative;
+  z-index: 0; /* vlastní stacking context, aby podtrh (::after, z-index -1) nezmizel pod pozadím sekce */
+  white-space: nowrap;
+}
+
+.hero h1 em::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.08em;
+  height: 0.28em;
+  background: var(--gold);
+  z-index: -1;
+  border-radius: 3px;
+}
+
+.hero-sub {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  color: var(--ink-soft);
+  max-width: 52ch;
+  margin-bottom: 2.2rem;
+}
+
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 0.9rem; }
+
+.hero-skyline {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  color: var(--wine-deep);
+}
+
+/* ---------- volební pruh ---------- */
+
+.election-strip {
+  background: var(--wine-deep);
+  color: var(--paper);
+}
+
+.strip-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem 2rem;
+  padding-block: 1.4rem;
+}
+
+.strip-date {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.strip-date small {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.2rem;
+}
+
+.countdown {
+  display: flex;
+  gap: 1.4rem;
+  font-family: var(--font-mono);
+}
+
+.countdown div { text-align: center; }
+
+.countdown b {
+  display: block;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown span {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+/* ---------- sekce ---------- */
+
+.section { padding-block: clamp(4rem, 8vw, 6.5rem); }
+
+.section-alt { background: var(--paper-2); }
+
+/* ---------- o nás ---------- */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: start;
+}
+
+.about-pull {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--wine-deep);
+}
+
+.about-pull mark {
+  background: linear-gradient(transparent 62%, var(--gold) 62%);
+  color: inherit;
+}
+
+.about-body p { margin-bottom: 1rem; color: var(--ink-soft); }
+
+.values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2.8rem;
+}
+
+.value-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.3rem;
+}
+
+.value-card svg { width: 30px; height: 30px; color: var(--wine); margin-bottom: 0.7rem; }
+
+.value-card h3 { font-size: 1.08rem; font-weight: 700; margin-bottom: 0.35rem; }
+
+.value-card p { font-size: 0.94rem; color: var(--ink-soft); }
+
+/* ---------- program + mapa ---------- */
+
+.program-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: start;
+  margin-top: 2.5rem;
+}
+
+.map-panel {
+  position: sticky;
+  top: 92px;
+}
+
+.map-frame {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+.map-caption {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-align: center;
+  padding-top: 0.8rem;
+}
+
+/* mapové špendlíky */
+.map-pin { cursor: pointer; transition: opacity 0.2s; }
+.map-pin circle.pin-bg { fill: var(--wine); transition: fill 0.2s, r 0.2s; }
+.map-pin text { fill: var(--paper); font-family: var(--font-mono); font-size: 13px; font-weight: 600; }
+.map-pin.active circle.pin-bg { fill: var(--gold-deep); }
+.map-pin.active circle.pin-pulse { animation: pin-pulse 1.6s ease-out infinite; }
+.map-pin circle.pin-pulse { fill: var(--gold-deep); }
+svg.town-map.has-active .map-pin:not(.active) { opacity: 0.35; }
+
+@keyframes pin-pulse {
+  0% { r: 11; opacity: 0.55; }
+  100% { r: 24; opacity: 0; }
+}
+
+.program-list { display: flex; flex-direction: column; gap: 0.7rem; }
+
+.program-item {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.program-item.active {
+  border-color: var(--gold-deep);
+  box-shadow: 0 6px 20px -10px rgba(196, 136, 15, 0.55);
+}
+
+.program-item summary {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  padding: 1.05rem 1.2rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.program-item summary::-webkit-details-marker { display: none; }
+
+.program-num {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--wine);
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(3px);
+  transition: background 0.2s;
+}
+
+.program-item.active .program-num { background: var(--gold-deep); }
+
+.program-title { font-family: var(--font-display); font-weight: 700; font-size: 1.12rem; }
+
+.program-summary { font-size: 0.92rem; color: var(--ink-soft); display: block; }
+
+.program-chevron {
+  margin-left: auto;
+  flex: none;
+  color: var(--wine);
+  transition: transform 0.25s;
+  transform: translateY(4px);
+}
+
+.program-item[open] .program-chevron { transform: translateY(4px) rotate(180deg); }
+
+.program-details {
+  padding: 0 1.2rem 1.2rem 3.35rem;
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+}
+
+.program-download {
+  margin-top: 2.5rem;
+  background: var(--wine-deep);
+  color: var(--paper);
+  border-radius: var(--radius);
+  padding: clamp(1.6rem, 3vw, 2.2rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+
+.program-download h3 { font-size: 1.35rem; font-weight: 700; margin-bottom: 0.3rem; }
+
+.program-download p { color: rgba(248, 244, 236, 0.75); font-size: 0.95rem; }
+
+/* ---------- kandidáti ---------- */
+
+.leader-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.8rem;
+  align-items: center;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--gold);
+  border-radius: var(--radius);
+  padding: clamp(1.4rem, 3vw, 2rem);
+  margin: 2.4rem 0 1.2rem;
+  box-shadow: var(--shadow);
+}
+
+.leader-card .avatar { width: 110px; height: 110px; font-size: 2.3rem; }
+
+.leader-card h3 { font-size: 1.6rem; font-weight: 800; }
+
+.leader-role {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-bottom: 0.3rem;
+}
+
+.leader-card blockquote {
+  margin-top: 0.6rem;
+  color: var(--ink-soft);
+  font-style: italic;
+  border-left: 3px solid var(--blush);
+  padding-left: 0.9rem;
+}
+
+.candidates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.candidate-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.3rem;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.candidate-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--blush);
+  color: var(--wine-deep);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.9rem;
+  border: 2px solid var(--wine-mid);
+}
+
+.candidate-card h3 { font-size: 1.1rem; font-weight: 700; }
+
+.candidate-meta { font-size: 0.86rem; color: var(--ink-soft); margin-bottom: 0.55rem; }
+
+.candidate-card p { font-size: 0.92rem; color: var(--ink-soft); font-style: italic; }
+
+/* ---------- aktuality ---------- */
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-top: 2.4rem;
+}
+
+.news-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-date {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-bottom: 0.6rem;
+}
+
+.news-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; }
+
+.news-card p { font-size: 0.95rem; color: var(--ink-soft); }
+
+/* ---------- přidejte se / kontakt ---------- */
+
+.join {
+  background:
+    radial-gradient(900px 420px at 15% 0%, rgba(232, 172, 59, 0.14), transparent 60%),
+    var(--wine-deep);
+  color: var(--paper);
+}
+
+.join .eyebrow { color: var(--gold); }
+
+.join-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.join h2 { color: var(--white); }
+
+.join-list { list-style: none; margin-top: 1.4rem; display: flex; flex-direction: column; gap: 0.9rem; }
+
+.join-list li { display: flex; gap: 0.8rem; align-items: baseline; color: rgba(248, 244, 236, 0.85); }
+
+.join-list svg { width: 18px; height: 18px; flex: none; color: var(--gold); transform: translateY(3px); }
+
+.contact-box {
+  background: rgba(248, 244, 236, 0.07);
+  border: 1px solid rgba(248, 244, 236, 0.18);
+  border-radius: var(--radius);
+  padding: clamp(1.5rem, 3vw, 2rem);
+}
+
+.contact-box h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 1.2rem; }
+
+.form-row { margin-bottom: 1rem; }
+
+.form-row label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+  color: rgba(248, 244, 236, 0.7);
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--paper);
+  background: rgba(248, 244, 236, 0.09);
+  border: 1px solid rgba(248, 244, 236, 0.25);
+  border-radius: 9px;
+  padding: 0.7rem 0.9rem;
+}
+
+.form-row input::placeholder, .form-row textarea::placeholder { color: rgba(248, 244, 236, 0.45); }
+
+.form-row select option { color: var(--ink); }
+
+.form-note { font-size: 0.8rem; color: rgba(248, 244, 236, 0.55); margin-top: 0.8rem; }
+
+.contact-lines { margin-top: 1.6rem; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.95rem; }
+
+.contact-lines a { color: var(--gold); text-decoration: none; }
+.contact-lines a:hover { text-decoration: underline; }
+
+.transparent-account {
+  margin-top: 1.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  background: rgba(248, 244, 236, 0.07);
+  border-radius: 9px;
+  padding: 0.8rem 1rem;
+  border: 1px dashed rgba(232, 172, 59, 0.5);
+}
+
+.transparent-account b { color: var(--gold); }
+
+/* ---------- patička ---------- */
+
+.footer {
+  background: #1E1114;
+  color: rgba(248, 244, 236, 0.6);
+  font-size: 0.85rem;
+}
+
+.footer-inner {
+  padding-block: 2.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer a { color: rgba(248, 244, 236, 0.85); }
+
+.footer-legal { max-width: 60ch; }
+
+/* ---------- scroll reveal ---------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.in { opacity: 1; transform: none; }
+
+/* ---------- responsivita ---------- */
+
+@media (max-width: 900px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    padding: 0.5rem var(--gutter) 1rem;
+    display: none;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { display: block; padding-block: 0.7rem; }
+  .nav-toggle { display: block; }
+  .brand-name { font-size: 0.85rem; }
+  .brand-mark { width: 32px; height: 32px; }
+
+  .about-grid, .join-grid, .program-layout { grid-template-columns: 1fr; }
+  .map-panel { position: static; }
+  .values { grid-template-columns: 1fr; }
+  .news-grid { grid-template-columns: 1fr; }
+  .leader-card { grid-template-columns: 1fr; text-align: center; }
+  .leader-card .avatar { margin-inline: auto; }
+  .leader-card blockquote { text-align: left; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .btn:hover, .candidate-card:hover { transform: none; }
+  .map-pin.active circle.pin-pulse { animation: none; }
+}
+
+/* ---------- tisk ---------- */
+
+@media print {
+  .nav, .hero-ctas, .join, .footer, .nav-toggle { display: none; }
+}

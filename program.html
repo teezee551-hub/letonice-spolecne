@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>Volební program 2026–2030 — LETONICE SPOLEČNĚ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F8F4EC; --ink: #271A1C; --ink-soft: #5D4A4E;
+    --wine: #7E2438; --wine-deep: #4E1420; --blush: #F0E0DA;
+    --gold: #E8AC3B; --gold-deep: #C4880F; --line: rgba(39,26,28,.16);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  @page { size: A4; margin: 0; }
+  html, body { background: #fff; }
+  body {
+    font-family: "Source Sans 3", "Segoe UI", sans-serif;
+    font-size: 10.5pt; line-height: 1.55; color: var(--ink);
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  .page { width: 210mm; min-height: 297mm; margin: 0 auto; padding: 16mm 18mm; position: relative; }
+  .page + .page { page-break-before: always; }
+
+  /* obálka */
+  .cover { background: var(--wine-deep); color: var(--paper); display: flex; flex-direction: column; }
+  .cover-brand { display: flex; align-items: center; gap: 5mm; }
+  .cover-brand svg { width: 16mm; height: 16mm; }
+  .cover-brand b { font-family: "Bricolage Grotesque", sans-serif; font-size: 13pt; letter-spacing: .02em; }
+  .cover-brand small { display: block; font-family: "IBM Plex Mono", monospace; font-size: 7pt; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); }
+  .cover-mid { margin: auto 0; }
+  .cover-eyebrow { font-family: "IBM Plex Mono", monospace; font-size: 8.5pt; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin-bottom: 6mm; }
+  .cover h1 { font-family: "Bricolage Grotesque", sans-serif; font-size: 34pt; line-height: 1.04; font-weight: 800; letter-spacing: -.01em; }
+  .cover h1 span { color: var(--gold); }
+  .cover-sub { margin-top: 7mm; font-size: 12.5pt; color: rgba(248,244,236,.82); max-width: 125mm; }
+  .cover-foot { border-top: 1px solid rgba(248,244,236,.25); padding-top: 5mm; display: flex; justify-content: space-between; font-family: "IBM Plex Mono", monospace; font-size: 8pt; letter-spacing: .08em; color: rgba(248,244,236,.7); }
+
+  /* vnitřní strany */
+  h2 { font-family: "Bricolage Grotesque", sans-serif; font-size: 17pt; font-weight: 800; color: var(--wine-deep); margin-bottom: 5mm; }
+  .intro { font-size: 11.5pt; color: var(--ink-soft); margin-bottom: 8mm; max-width: 165mm; }
+  .point { border: 1px solid var(--line); border-left: 1.2mm solid var(--gold); border-radius: 2.5mm; padding: 4.5mm 5.5mm; margin-bottom: 4.5mm; page-break-inside: avoid; }
+  .point-head { display: flex; align-items: baseline; gap: 3.5mm; margin-bottom: 1.5mm; }
+  .point-num { font-family: "IBM Plex Mono", monospace; font-weight: 600; font-size: 9pt; color: #fff; background: var(--wine); border-radius: 50%; width: 6.5mm; height: 6.5mm; display: inline-flex; align-items: center; justify-content: center; flex: none; transform: translateY(1mm); }
+  .point h3 { font-family: "Bricolage Grotesque", sans-serif; font-size: 12.5pt; font-weight: 700; }
+  .point-place { margin-left: auto; font-family: "IBM Plex Mono", monospace; font-size: 7pt; letter-spacing: .1em; text-transform: uppercase; color: var(--gold-deep); }
+  .point-summary { font-weight: 600; color: var(--wine-deep); margin-bottom: 1.5mm; }
+  .point ul { margin: 1mm 0 0 5mm; color: var(--ink-soft); }
+  .point li { margin-bottom: .8mm; }
+
+  /* kandidátka */
+  .cand-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5mm; margin-top: 4mm; }
+  .cand { border: 1px solid var(--line); border-radius: 2.5mm; padding: 4mm 4.5mm; page-break-inside: avoid; }
+  .cand b { font-family: "Bricolage Grotesque", sans-serif; font-size: 11pt; }
+  .cand .meta { font-size: 8.5pt; color: var(--ink-soft); margin-bottom: 1mm; }
+  .cand .motto { font-style: italic; font-size: 9.5pt; color: var(--ink-soft); }
+  .cand.lead { grid-column: 1 / -1; background: var(--blush); border-left: 1.2mm solid var(--gold); }
+
+  .box { background: var(--wine-deep); color: var(--paper); border-radius: 2.5mm; padding: 5.5mm 6mm; margin-top: 6mm; page-break-inside: avoid; }
+  .box b { color: var(--gold); }
+  .legal { margin-top: 6mm; padding-top: 4mm; border-top: 1px solid var(--line); font-size: 8pt; color: var(--ink-soft); }
+</style>
+</head>
+<body>
+
+<!-- STRANA 1: obálka -->
+<div class="page cover">
+  <div class="cover-brand">
+    <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#F8F4EC"/><rect x="26" y="26" width="12" height="22" fill="#7E2438"/><path d="M23 26h18L32 13z" fill="#7E2438"/><circle cx="32" cy="10.5" r="2" fill="#7E2438"/><rect x="31.3" y="3.5" width="1.4" height="5" fill="#7E2438"/><rect x="29.5" y="5" width="5" height="1.4" fill="#7E2438"/><rect x="38" y="36" width="13" height="12" fill="#7E2438"/><rect x="30" y="32" width="4" height="7" rx="2" fill="#F8F4EC"/></svg>
+    <b>LETONICE SPOLEČNĚ<small>sdružení nezávislých kandidátů</small></b>
+  </div>
+  <div class="cover-mid">
+    <p class="cover-eyebrow">Volební program · komunální volby 2026</p>
+    <h1>Máme rádi Letonice.<br>A máme <span>plán</span>.</h1>
+    <p class="cover-sub">Devět priorit pro roky 2026–2030: infokanál zpátky v provozu, spolky a hody s pořádnou podporou, otevřený úřad a obec, kde chtějí zůstat i mladí. Bez frází — a tak, aby si nás každý mohl zkontrolovat.</p>
+  </div>
+  <div class="cover-foot">
+    <span>Komunální volby 2026</span>
+    <span>Volby: 9.–10. října 2026</span>
+  </div>
+</div>
+
+<!-- STRANA 2: program 1–5 -->
+<div class="page">
+  <h2>Devět priorit pro Letonice</h2>
+  <p class="intro">Nejsme kariérní politici — jsme vaši sousedé. Tenhle program vznikl z rozhovorů s vámi: na návsi, na hodech, u hasičů i v hospodě. Každý bod má své místo v obci a svého garanta na kandidátce.</p>
+
+  <div class="point">
+    <div class="point-head"><span class="point-num">1</span><h3>Infokanál zpátky v provozu</h3><span class="point-place">obecní úřad · kabelovka</span></div>
+    <p class="point-summary">Obecní infokanál znovu vysílá a hlášení rozhlasu dostanete do mobilu.</p>
+    <ul>
+      <li>Obnovíme infokanál v obecní kabelové televizi: dění v obci, pozvánky spolků, fotky z akcí, záznamy zastupitelstva.</li>
+      <li>Hlášení rozhlasu zároveň jako zpráva do mobilu (SMS / aplikace).</li>
+      <li>Pondělní večerní souhrn týdne pro ty, kdo internet nevedou.</li>
+    </ul>
+  </div>
+
+  <div class="point">
+    <div class="point-head"><span class="point-num">2</span><h3>Otevřený úřad</h3><span class="point-place">obecní úřad · úřední deska</span></div>
+    <p class="point-summary">Zápisy a rozpočet online hned, ne za půl roku.</p>
+    <ul>
+      <li>Zápisy a usnesení zastupitelstva zveřejníme do týdne po schválení.</li>
+      <li>Rozpočet srozumitelně: co se chystá, kolik to stojí a proč.</li>
+      <li>Jednou měsíčně otevřené dveře na úřadě — bez objednání.</li>
+    </ul>
+  </div>
+
+  <div class="point">
+    <div class="point-head"><span class="point-num">3</span><h3>Spolky jsou srdce obce</h3><span class="point-place">zbrojnice · myslivna</span></div>
+    <p class="point-summary">Hasiči, myslivci, TJ, Orel i zahrádkáři — víc peněz, míň papírování.</p>
+    <ul>
+      <li>Vyšší dotace spolkům, žádost na jednu stránku.</li>
+      <li>Důstojné zázemí pro SDH (obci slouží od roku 1895) i myslivce pečující o krajinu kolem Větrníků.</li>
+      <li>Sál Obecního domu pro spolky za symbolický nájem + společný kalendář akcí.</li>
+    </ul>
+  </div>
+
+  <div class="point">
+    <div class="point-head"><span class="point-num">4</span><h3>Hody, plesy, kultura</h3><span class="point-place">obecní dům · náves</span></div>
+    <p class="point-summary">Antonínské hody jako chlouba obce a sál, který žije celý rok.</p>
+    <ul>
+      <li>Třídenní Antonínské hody s krojovaným průvodem a stavěním máje podpoříme penězi i rukama.</li>
+      <li>Myslivecký ples s trubači, obecní ples i kapela Sebranka — sál dokořán.</li>
+      <li>Letní kino na návsi a pravidelná setkávání seniorů v Obecním domě.</li>
+    </ul>
+  </div>
+
+  <div class="point">
+    <div class="point-head"><span class="point-num">5</span><h3>Škola a školka</h3><span class="point-place">ZŠ a MŠ Letonice</span></div>
+    <p class="point-summary">Moderní třídy a dost míst pro letonické děti.</p>
+    <ul>
+      <li>Postupná modernizace tříd základní školy i zázemí školky.</li>
+      <li>Bezpečná cesta do školy: opravené chodníky a přehledný přechod.</li>
+      <li>Družina a kroužky tak, aby rodiče nemuseli vozit děti do Vyškova.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- STRANA 3: program 6–9 + kandidátka -->
+<div class="page">
+  <div class="point">
+    <div class="point-head"><span class="point-num">6</span><h3>Sport a hřiště</h3><span class="point-place">hřiště TJ · dětské hřiště</span></div>
+    <p class="point-summary">Zázemí pro fotbal i volejbal a dětské hřiště, které něco vydrží.</p>
+    <ul>
+      <li>Podpora TJ Letonice — údržba hřiště a kabin.</li>
+      <li>Obnova dětského hřiště: bezpečné povrchy a poctivé herní prvky.</li>
+      <li>Sportoviště otevřená veřejnosti i mimo tréninky.</li>
+    </ul>
+  </div>
+
+  <div class="point">
+    <div class="point-head"><span class="point-num">7</span><h3>Bydlení pro mladé</h3><span class="point-place">stavební místa</span></div>
+    <p class="point-summary">Stavební místa, ať mladí nemusí z Letonic pryč.</p>
+    <ul>
+      <li>Příprava obecních pozemků: sítě, cesty, jasná pravidla prodeje.</li>
+      <li>Pomoc mladým rodinám s papírováním kolem stavebního řízení.</li>
+      <li>Zmapování prázdných domů a propojení majitelů se zájemci.</li>
+    </ul>
+  </div>
+
+  <div class="point">
+    <div class="point-head"><span class="point-num">8</span><h3>Chodníky a bezpečná silnice</h3><span class="point-place">průtah obcí · zastávky</span></div>
+    <p class="point-summary">Opravené chodníky a klidnější průjezd obcí.</p>
+    <ul>
+      <li>Opravy rozbitých chodníků a doplnění chybějících úseků.</li>
+      <li>Nasvícené přechody a autobusové zastávky.</li>
+      <li>Jednání s krajem: zklidnění průtahu, lepší spoje do Vyškova a Brna.</li>
+    </ul>
+  </div>
+
+  <div class="point">
+    <div class="point-head"><span class="point-num">9</span><h3>Krajina a Větrníky</h3><span class="point-place">PR Větrníky · polní cesty</span></div>
+    <p class="point-summary">Polní cesty, aleje a voda v krajině, která nás živí.</p>
+    <ul>
+      <li>Obnova polních cest a výsadba alejí — s myslivci a zemědělci.</li>
+      <li>Zadržování vody v krajině: meze, tůňky, zeleň kolem potoka.</li>
+      <li>Okolí Větrníků přístupné pro procházky i pro přírodu.</li>
+    </ul>
+  </div>
+
+  <h2 style="margin-top:8mm">Naše kandidátka</h2>
+  <div class="cand-grid">
+    <div class="cand lead"><b>1. Petr Skokan</b><p class="meta">50 let · strojník · lídr kandidátky</p></div>
+    <div class="cand"><b>2. Bc. Zdeňka Trnková</b><p class="meta">45 let · HR manažer</p></div>
+    <div class="cand"><b>3. Mgr. Miluše Hálová</b><p class="meta">38 let · právník, notářská koncipientka</p></div>
+    <div class="cand"><b>4. Jaroslav Dekýš</b><p class="meta">44 let · truhlář, operátor CNC</p></div>
+    <div class="cand"><b>5. Jan Ježorek</b><p class="meta">75 let · důchodce, OSVČ</p></div>
+    <div class="cand"><b>6. Mgr. Kristýna Brtníková</b><p class="meta">40 let · učitelka na základní škole</p></div>
+    <div class="cand"><b>7. Zuzana Kachlíková</b><p class="meta">41 let · bankovní poradce</p></div>
+    <div class="cand"><b>8. Ing. Jaroslav Krontorád</b><p class="meta">54 let · IT analytik</p></div>
+    <div class="cand"><b>9. Aleš Hanák</b><p class="meta">39 let · ředitel společnosti</p></div>
+    <div class="cand"><b>10. Veronika Klimešová</b><p class="meta">38 let · referent kvality</p></div>
+    <div class="cand"><b>11. Mgr. Petr Tomek</b><p class="meta">25 let · analytik kybernetické bezpečnosti</p></div>
+    <div class="cand"><b>12. Jaroslav Lučan</b><p class="meta">41 let · vedoucí prodejny stavebnin</p></div>
+    <div class="cand"><b>13. Jaroslav Malovec</b><p class="meta">43 let · pracovník v zemědělství</p></div>
+    <div class="cand"><b>14. Ladislav Lefner</b><p class="meta">43 let · dělník</p></div>
+    <div class="cand"><b>15. Pavel Selinger</b><p class="meta">56 let · podnikatel</p></div>
+  </div>
+  <div class="box">
+    <b>Přijďte k volbám:</b> pátek 9. října 14:00–22:00 a sobota 10. října 2026 8:00–14:00.
+    Kandidátku tvoří 15 kandidátů bez politické příslušnosti.
+  </div>
+
+  <p class="legal">© 2026 LETONICE SPOLEČNĚ — sdružení nezávislých kandidátů. Zadavatel a zpracovatel: LETONICE SPOLEČNĚ. Zmocněnec: Antonín Skokan.</p>
+</div>
+
+</body>
+</html>
