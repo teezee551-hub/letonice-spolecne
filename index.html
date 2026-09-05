@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LETONICE SPOLEČNĚ — Komunální volby 2026</title>
-<meta name="description" content="Kandidátka sdružení nezávislých kandidátů LETONICE SPOLEČNĚ pro komunální volby 9.–10. října 2026.">
-<meta property="og:title" content="LETONICE SPOLEČNĚ — Komunální volby 2026">
-<meta property="og:description" content="Patnáct kandidátů z Letonic pro komunální volby 9.–10. října 2026.">
-<meta property="og:type" content="website">
+<title>LETONICE SPOLEČNĚ — sdružení nezávislých kandidátů · komunální volby 2026</title>
+<meta name="description" content="Rozumně. Otevřeně. Pro Letonice. Sedm priorit, patnáct sousedů bez politické příslušnosti a plán, který stojí na zdravém rozumu. Komunální volby 9.–10. října 2026.">
+<meta name="theme-color" content="#6E1424">
+<meta property="og:title" content="LETONICE SPOLEČNĚ — komunální volby 2026">
+<meta property="og:description" content="Chceme obec, která naslouchá lidem a dělá věci, které dávají smysl. Sedm priorit pro Letonice 2026–2030.">
 <meta property="og:url" content="https://teezee551-hub.github.io/letonice-spolecne/">
 <meta property="og:image" content="https://teezee551-hub.github.io/letonice-spolecne/og.png">
 <meta property="og:image:width" content="1731">
@@ -16,108 +16,80 @@
 <meta name="twitter:title" content="LETONICE SPOLEČNĚ — Komunální volby 2026">
 <meta name="twitter:description" content="Patnáct kandidátů z Letonic pro komunální volby 9.–10. října 2026.">
 <meta name="twitter:image" content="https://teezee551-hub.github.io/letonice-spolecne/og.png">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%237E2438'/%3E%3Crect x='26' y='26' width='12' height='22' fill='%23F8F4EC'/%3E%3Cpath d='M23 26h18L32 13z' fill='%23F8F4EC'/%3E%3Ccircle cx='32' cy='10.5' r='2' fill='%23F8F4EC'/%3E%3Crect x='31.3' y='3.5' width='1.4' height='5' fill='%23F8F4EC'/%3E%3Crect x='29.5' y='5' width='5' height='1.4' fill='%23F8F4EC'/%3E%3Crect x='38' y='36' width='13' height='12' fill='%23F8F4EC'/%3E%3Crect x='30' y='32' width='4' height='7' rx='2' fill='%237E2438'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="assets/img/favicon-96.png">
+<link rel="apple-touch-icon" href="assets/img/logo-512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css">
 <link rel="stylesheet" href="styles.css">
+<link rel="canonical" href="https://teezee551-hub.github.io/letonice-spolecne/">
 </head>
 <body>
-<div role="status" style="background:#271A1C;color:#F8F4EC;padding:.7rem 1rem;text-align:center;font:600 .92rem/1.4 'Source Sans 3',sans-serif">Pracovní náhled — program a kontaktní údaje čekají na finální potvrzení.</div>
+<a class="skip-link" href="#main">Přejít na obsah</a>
 
 <!-- ============ NAVIGACE ============ -->
 <header class="nav">
   <div class="wrap nav-inner">
     <a class="brand" href="#uvod">
-      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
-        <circle cx="32" cy="32" r="30" fill="#7E2438"/>
-        <rect x="26" y="26" width="12" height="22" fill="#F8F4EC"/>
-        <path d="M23 26h18L32 13z" fill="#F8F4EC"/>
-        <circle cx="32" cy="10.5" r="2" fill="#F8F4EC"/>
-        <rect x="31.3" y="3.5" width="1.4" height="5" fill="#F8F4EC"/>
-        <rect x="29.5" y="5" width="5" height="1.4" fill="#F8F4EC"/>
-        <rect x="38" y="36" width="13" height="12" fill="#F8F4EC"/>
-        <rect x="30" y="32" width="4" height="7" rx="2" fill="#7E2438"/>
-      </svg>
-      <span class="brand-name">LETONICE SPOLEČNĚ<small>komunální volby 2026</small></span>
+      <img class="brand-mark" src="assets/img/logo-512.png" width="44" height="44" alt="Logo LETONICE SPOLEČNĚ – kostel, koniklece a hlaváčky">
+      <span class="brand-name">LETONICE SPOLEČNĚ<small>sdružení nezávislých kandidátů · 2026</small></span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Otevřít menu">☰</button>
     <nav>
       <ul class="nav-links" id="nav-menu">
         <li><a href="#o-nas">Kdo jsme</a></li>
         <li><a href="#program">Program</a></li>
+        <li><a href="#koupaliste">Koupaliště</a></li>
         <li><a href="#kandidati">Kandidáti</a></li>
-        <li><a href="#aktuality">Aktuality</a></li>
+        <li><a href="#jak-volit">Jak volit</a></li>
         <li><a href="#pridejte-se">Kontakt</a></li>
       </ul>
     </nav>
-    <a class="btn btn-primary btn-sm" href="program.html">Program</a>
+    <a class="btn btn-primary btn-sm" href="assets/program.pdf" download>Program&nbsp;(PDF)</a>
   </div>
 </header>
 
-<main>
+<main id="main">
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="uvod">
+  <img class="hero-bg" src="assets/img/hero-letonice.jpg" srcset="assets/img/hero-letonice-1200.jpg 1200w, assets/img/hero-letonice.jpg 1920w" sizes="100vw" alt="" fetchpriority="high">
+  <div class="hero-shade" aria-hidden="true"></div>
   <div class="wrap hero-inner">
-    <p class="eyebrow">Komunální volby · Letonice · 9.–10. října 2026</p>
-    <h1>Máme rádi Letonice. A&nbsp;máme <em>plán</em>.</h1>
-    <p class="hero-sub">Jsme patnáct sousedů z Letonic s různými profesemi a zkušenostmi. Kandidujeme jako nezávislí, protože obec, kde fungují spolky, hody i infokanál, si zaslouží úřad, který s nimi drží krok.</p>
-    <div class="hero-ctas">
-      <a class="btn btn-primary" href="program.html">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-        Otevřít program
-      </a>
-      <a class="btn btn-ghost" href="#kandidati">Poznejte kandidáty</a>
+    <div>
+      <p class="eyebrow eyebrow-light">Sdružení nezávislých kandidátů · volby 9.–10. 10. 2026</p>
+      <h1>Rozumně. Otevřeně. <em>Pro Letonice.</em></h1>
+      <p class="hero-script script">Chceme obec, která naslouchá lidem a dělá věci, které dávají smysl.</p>
+      <p class="hero-sub">Máme plán, který vychází ze skutečných potřeb Letonic a stojí na zdravém rozumu. Chceme naslouchat lidem, hospodařit s rozmyslem, pečovat o to, co máme, a krok za krokem posouvat naši obec dál.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-light" href="#program">Sedm priorit pro Letonice</a>
+        <a class="btn btn-outline-light" href="#kandidati">Poznejte kandidáty</a>
+      </div>
+    </div>
+    <div class="hero-card reveal">
+      <div class="check" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      </div>
+      <div>
+        <p>Zachováme, co funguje. Zlepšíme, co zlepšit můžeme. A pustíme se do projektů, které <b>Letonice skutečně potřebují a mohou si je dovolit.</b></p>
+        <small>Náš závazek pro roky 2026–2030</small>
+      </div>
     </div>
   </div>
-  <svg class="hero-skyline" viewBox="0 0 1440 180" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-    <g fill="currentColor">
-      <!-- Větrník v pozadí -->
-      <path d="M880 180 Q 1090 78 1330 180 Z" opacity="0.5"/>
-      <rect x="0" y="176" width="1440" height="4"/>
-      <!-- stromy a domy zleva -->
-      <rect x="56" y="140" width="8" height="40"/><circle cx="60" cy="122" r="24"/>
-      <path d="M100 180v-42l45-26 45 26v42z"/>
-      <path d="M205 180v-56l40-22 40 22v56z"/>
-      <rect x="306" y="146" width="8" height="34"/><circle cx="310" cy="128" r="21"/>
-      <!-- kostel sv. Mikuláše: loď + věž s bání a křížem -->
-      <rect x="420" y="110" width="92" height="70"/>
-      <rect x="374" y="70" width="44" height="110"/>
-      <path d="M368 70h56L396 32z"/>
-      <circle cx="396" cy="27" r="5.5"/>
-      <rect x="394.8" y="8" width="2.4" height="14"/>
-      <rect x="390" y="12" width="12" height="2.4"/>
-      <!-- kaple -->
-      <rect x="666" y="132" width="42" height="48"/>
-      <path d="M660 132h54l-27-24z"/>
-      <rect x="686" y="98" width="2" height="10"/>
-      <rect x="682.5" y="101" width="9" height="2"/>
-      <!-- stodola -->
-      <path d="M756 180v-40l52-18 52 18v40z"/>
-      <!-- řada domů -->
-      <path d="M886 180v-34l32-18 32 18v34z"/>
-      <path d="M962 180v-44l38-22 38 22v44z"/>
-      <rect x="1052" y="144" width="8" height="36"/><circle cx="1056" cy="126" r="22"/>
-      <path d="M1092 180v-38l36-20 36 20v38z"/>
-      <path d="M1180 180v-46l40-24 40 24v46z"/>
-      <rect x="1276" y="142" width="8" height="38"/><circle cx="1280" cy="122" r="23"/>
-      <rect x="1334" y="148" width="8" height="32"/><circle cx="1338" cy="132" r="19"/>
-      <path d="M1364 180v-36l38-20 38 20v36z"/>
-    </g>
-  </svg>
 </section>
 
 <!-- ============ VOLEBNÍ PRUH ============ -->
 <div class="election-strip" role="region" aria-label="Termín voleb">
   <div class="wrap strip-inner">
-    <p class="strip-date"><small>Přijďte k volbám</small>pá 9. 10. <span style="opacity:.55">14–22 h</span> &nbsp;·&nbsp; so 10. 10. <span style="opacity:.55">8–14 h</span></p>
+    <p class="strip-date"><small>Přijďte k volbám</small>pá 9. 10. <span>14–22 h</span> &nbsp;·&nbsp; so 10. 10. <span>8–14 h</span></p>
     <div class="countdown" id="countdown" aria-label="Odpočet do voleb">
       <div><b id="cd-days">—</b><span>dní</span></div>
       <div><b id="cd-hours">—</b><span>hodin</span></div>
       <div><b id="cd-mins">—</b><span>minut</span></div>
     </div>
-    <a class="btn btn-primary btn-sm" href="#pridejte-se">Chci pomoct s kampaní</a>
+    <a class="btn btn-light btn-sm" href="#jak-volit">Jak správně volit</a>
   </div>
 </div>
 
@@ -126,28 +98,37 @@
   <div class="wrap">
     <p class="eyebrow">Kdo jsme</p>
     <div class="about-grid">
-      <p class="about-pull reveal">Nejsme kariérní politici. Jsme lidé, které potkáte <mark>u hasičů, na hodech</mark> i na fotbale.</p>
+      <p class="about-pull script reveal">Jsme sousedé, které potkáváte <mark>na návsi, na hřišti i u školky.</mark> Ne politici.</p>
       <div class="about-body reveal">
-        <p>Jsme parta sousedů z Letonic — od hasičů a myslivců, ze školy, z pole i od počítače. Většina z nás tu prožila celý život a nikam se nechystáme.</p>
-        <p>Letonice mají přes 1 300 obyvatel, živé spolky a tradice, které nám okolní obce závidí. Kandidujeme, protože obci chybí jediné: úřad, který tohle všechno propojí, podpoří — a umí o tom dát vědět.</p>
+        <p>Patnáct lidí z Letonic bez politické příslušnosti — strojník, HR manažerka, právnička, truhlář, učitelka, bankovní poradkyně, IT analytik i analytik kybernetické bezpečnosti. Různé profese a různé generace, od pětadvaceti do pětasedmdesáti let. Spojuje nás jedno: v Letonicích žijeme a záleží nám na tom, kam obec půjde.</p>
+        <p>Nechceme slibovat nereálné a velké akce. Chceme, aby se nám všem v obci dobře žilo — a aby úřad s lidmi mluvil otevřeně, hospodařil s rozmyslem a dotahoval smysluplné věci do konce.</p>
       </div>
     </div>
+
     <div class="values">
       <div class="value-card reveal">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        <h3>Sousedé, ne strany</h3>
-        <p>Nezávislé sdružení bez stranické centrály. Známe se z návsi, ne z billboardů.</p>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M5.6 5.6l2.1 2.1M3 12h3M18.4 5.6l-2.1 2.1M21 12h-3"/><path d="M8 16a4 4 0 1 1 8 0v2H8z"/><path d="M10 21h4"/></svg>
+        <h3>Rozumně</h3>
+        <p>Každou investici posuzujeme podle toho, co Letonicím skutečně přinese a co bude stát i po dokončení. Dotace je příležitost, ne důvod pořizovat něco, co obec nepotřebuje.</p>
       </div>
       <div class="value-card reveal">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V4"/><path d="M4 5h13l-2.5 3.5L17 12H4"/></svg>
-        <h3>Spolky a tradice</h3>
-        <p>Hasiči, myslivci, TJ, Orel i zahrádkáři — na nich Letonice stojí. Zaslouží si víc než potlesk.</p>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.4A8.5 8.5 0 1 1 21 12z"/><path d="M8 11h8M8 14h5"/></svg>
+        <h3>Otevřeně</h3>
+        <p>Každý podnět zaevidujeme a odpovíme na něj. Podklady k zastupitelstvu zveřejníme předem, zápisy doplníme o jmenovité hlasování a z jednání pořídíme záznam.</p>
       </div>
       <div class="value-card reveal">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
-        <h3>Vše na stole</h3>
-        <p>Transparentní účet, zápisy hned po schválení a rozpočet, kterému rozumí každý.</p>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.6-7-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 7 3.5C19 16.4 12 21 12 21z"/></svg>
+        <h3>Pro Letonice</h3>
+        <p>Spolky, škola, hasiči, hřiště i areál koupaliště. Živá obec nevzniká na obecním úřadě — vytvářejí ji lidé. Úkolem obce je vytvářet jim pro to dobré podmínky.</p>
       </div>
+    </div>
+
+    <div class="collage reveal">
+      <figure><img src="assets/img/kroje.jpg" alt="Krojovaný průvod ulicí v Letonicích" loading="lazy"><figcaption>Hody v Letonicích</figcaption></figure>
+      <figure><img src="assets/img/hasici.jpg" alt="Letoničtí hasiči před zbrojnicí" loading="lazy"><figcaption>Naši hasiči</figcaption></figure>
+      <figure><img src="assets/img/volejbal.jpg" alt="Volejbalový zápas na antukovém hřišti" loading="lazy"><figcaption>Sport v obci</figcaption></figure>
+      <figure><img src="assets/img/kostel.jpg" alt="Kostel v Letonicích na podzim" loading="lazy"><figcaption>Kostel</figcaption></figure>
+      <figure><img src="assets/img/koniklec.jpg" alt="Koniklece na Větrníkách" loading="lazy"><figcaption>Koniklece z našeho loga</figcaption></figure>
     </div>
   </div>
 </section>
@@ -155,228 +136,374 @@
 <!-- ============ PROGRAM + MAPA ============ -->
 <section class="section section-alt" id="program">
   <div class="wrap">
-    <p class="eyebrow">Program 2026–2030</p>
-    <h2>Plán pro každý kout Letonic</h2>
-    <p class="section-lead">Devět priorit, devět míst v obci. Najeďte na bod programu a uvidíte, kde v Letonicích se ho dotkne.</p>
+    <p class="eyebrow">Náš program pro Letonice · 2026–2030</p>
+    <h2>Sedm priorit. Jeden plán.</h2>
+    <p class="section-lead">Program je především závazek, jak chceme k vedení obce přistupovat. Vyberte téma a přečtěte si konkrétní kroky. Na mapě najdete skutečná místa v obci, která s programem souvisejí.</p>
 
     <div class="program-layout">
-      <div class="map-panel reveal">
+      <div class="map-panel">
         <div class="map-frame">
-          <svg class="town-map" id="town-map" viewBox="0 0 640 520" role="img" aria-label="Stylizovaná mapa Letonic s devíti body programu">
-            <rect x="0" y="0" width="640" height="520" rx="8" fill="#FCFAF4"/>
-            <!-- pole -->
-            <ellipse cx="75" cy="90" rx="100" ry="70" fill="#F4EDD9"/>
-            <ellipse cx="560" cy="330" rx="80" ry="95" fill="#F4EDD9"/>
-            <!-- les a kopec Větrníky -->
-            <path d="M545 0 C 530 45, 545 90, 590 112 C 620 124, 642 100, 640 0 Z" fill="#CFDCC4"/>
-            <g fill="#AABF97">
-              <circle cx="585" cy="52" r="10"/><circle cx="612" cy="74" r="12"/><circle cx="598" cy="30" r="9"/>
-            </g>
-            <!-- Letonický potok -->
-            <path d="M155 -10 C 165 90, 205 170, 230 260 C 250 330, 245 420, 255 530" fill="none" stroke="#B7CCD6" stroke-width="16" stroke-linecap="round"/>
-            <!-- ulice -->
-            <g stroke="#EBE3D0" fill="none" stroke-linecap="round">
-              <path d="M0 295 C 160 285, 340 268, 640 238" stroke-width="13"/>
-              <path d="M330 272 C 345 190, 355 130, 372 55" stroke-width="8"/>
-              <path d="M318 278 C 308 360, 300 430, 306 520" stroke-width="8"/>
-              <path d="M160 290 C 120 330, 100 360, 92 395" stroke-width="7"/>
-              <path d="M420 258 C 450 220, 468 192, 478 162" stroke-width="7"/>
-              <path d="M370 266 C 390 330, 395 380, 398 418" stroke-width="7"/>
-            </g>
-            <!-- náves -->
-            <rect x="270" y="240" width="150" height="68" rx="10" fill="#F3EAD3" stroke="#E0D6BC"/>
-            <!-- kopec s kostelem a hřbitovem -->
-            <ellipse cx="490" cy="135" rx="95" ry="55" fill="#F0E8D0"/>
-            <!-- budovy -->
-            <g fill="#EAD9CE" stroke="rgba(126,36,56,.4)">
-              <rect x="295" y="246" width="44" height="26" rx="3"/>               <!-- obecní úřad -->
-              <rect x="358" y="270" width="46" height="28" rx="3"/>               <!-- obecní dům -->
-              <rect x="150" y="305" width="46" height="26" rx="3"/>               <!-- zbrojnice -->
-              <rect x="255" y="95" width="52" height="28" rx="3"/>                <!-- ZŠ -->
-              <rect x="313" y="100" width="26" height="20" rx="3"/>               <!-- MŠ -->
-              <rect x="462" y="118" width="40" height="24" rx="3"/>               <!-- kostel loď -->
-              <rect x="448" y="112" width="16" height="30" rx="2"/>               <!-- kostel věž -->
-            </g>
-            <!-- kříž na věži -->
-            <path d="M456 106v-9M451.5 100.5h9" stroke="#7E2438" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-            <!-- hřbitov -->
-            <rect x="512" y="122" width="34" height="24" rx="2" fill="none" stroke="#B9A98F" stroke-dasharray="4 3"/>
-            <!-- hřiště TJ + dětské hřiště -->
-            <ellipse cx="405" cy="450" rx="58" ry="26" fill="none" stroke="#D8C9A8" stroke-width="8"/>
-            <circle cx="478" cy="428" r="10" fill="#F3EAD3" stroke="#E0D6BC"/>
-            <!-- stavební místa -->
-            <g fill="none" stroke="#C29A5B" stroke-dasharray="5 4">
-              <rect x="62" y="400" width="26" height="18" rx="2"/>
-              <rect x="94" y="406" width="26" height="18" rx="2"/>
-              <rect x="76" y="428" width="26" height="18" rx="2"/>
-            </g>
-            <!-- popisky -->
-            <g font-family="IBM Plex Mono, monospace" font-size="10" fill="#8A7A70" text-anchor="middle">
-              <text x="345" y="322">náves</text>
-              <text x="317" y="240">obecní úřad</text>
-              <text x="404" y="312">obecní dům</text>
-              <text x="173" y="345">zbrojnice</text>
-              <text x="288" y="88">ZŠ a MŠ</text>
-              <text x="490" y="176">kostel sv. Mikuláše</text>
-              <text x="405" y="492">hřiště TJ</text>
-              <text x="102" y="462">stavební místa</text>
-              <text x="565" y="130">PR Větrníky · 394 m</text>
-              <text x="222" y="215" fill="#9FB4BE">potok</text>
-            </g>
-            <!-- špendlíky programu -->
-            <g id="map-pins">
-              <g class="map-pin" data-point="1" tabindex="0" role="button" aria-label="Bod 1: Infokanál zpátky v provozu — obecní úřad"><circle class="pin-pulse" cx="317" cy="228" r="11" opacity="0"/><circle class="pin-bg" cx="317" cy="228" r="11"/><text x="317" y="232.5" text-anchor="middle">1</text></g>
-              <g class="map-pin" data-point="2" tabindex="0" role="button" aria-label="Bod 2: Otevřený úřad — úřední deska na návsi"><circle class="pin-pulse" cx="283" cy="298" r="11" opacity="0"/><circle class="pin-bg" cx="283" cy="298" r="11"/><text x="283" y="302.5" text-anchor="middle">2</text></g>
-              <g class="map-pin" data-point="3" tabindex="0" role="button" aria-label="Bod 3: Spolky jsou srdce obce — hasičská zbrojnice"><circle class="pin-pulse" cx="173" cy="297" r="11" opacity="0"/><circle class="pin-bg" cx="173" cy="297" r="11"/><text x="173" y="301.5" text-anchor="middle">3</text></g>
-              <g class="map-pin" data-point="4" tabindex="0" role="button" aria-label="Bod 4: Hody, plesy, kultura — sál Obecního domu"><circle class="pin-pulse" cx="381" cy="262" r="11" opacity="0"/><circle class="pin-bg" cx="381" cy="262" r="11"/><text x="381" y="266.5" text-anchor="middle">4</text></g>
-              <g class="map-pin" data-point="5" tabindex="0" role="button" aria-label="Bod 5: Škola a školka"><circle class="pin-pulse" cx="281" cy="86" r="11" opacity="0"/><circle class="pin-bg" cx="281" cy="86" r="11"/><text x="281" y="90.5" text-anchor="middle">5</text></g>
-              <g class="map-pin" data-point="6" tabindex="0" role="button" aria-label="Bod 6: Sport a hřiště — hřiště TJ Letonice"><circle class="pin-pulse" cx="405" cy="445" r="11" opacity="0"/><circle class="pin-bg" cx="405" cy="445" r="11"/><text x="405" y="449.5" text-anchor="middle">6</text></g>
-              <g class="map-pin" data-point="7" tabindex="0" role="button" aria-label="Bod 7: Bydlení pro mladé — stavební místa"><circle class="pin-pulse" cx="88" cy="392" r="11" opacity="0"/><circle class="pin-bg" cx="88" cy="392" r="11"/><text x="88" y="396.5" text-anchor="middle">7</text></g>
-              <g class="map-pin" data-point="8" tabindex="0" role="button" aria-label="Bod 8: Chodníky a bezpečná silnice — průtah obcí"><circle class="pin-pulse" cx="75" cy="292" r="11" opacity="0"/><circle class="pin-bg" cx="75" cy="292" r="11"/><text x="75" y="296.5" text-anchor="middle">8</text></g>
-              <g class="map-pin" data-point="9" tabindex="0" role="button" aria-label="Bod 9: Krajina a Větrníky"><circle class="pin-pulse" cx="598" cy="95" r="11" opacity="0"/><circle class="pin-bg" cx="598" cy="95" r="11"/><text x="598" y="99.5" text-anchor="middle">9</text></g>
-            </g>
-          </svg>
-          <p class="map-caption">Klikněte na číslo — každý bod programu má své místo</p>
+          <div class="map-heading"><div><span class="eyebrow">Tady jsme doma</span><h3>Letonice na mapě</h3></div><button class="map-reset" id="map-reset" type="button">Celá obec ↗</button></div>
+          <div id="town-map" class="real-map" role="region" aria-label="Interaktivní mapa skutečných míst v Letonicích"><p class="map-loading">Načítání mapy…</p></div>
+          <p id="map-status" class="map-status" role="status">Vyberte místo nebo bod programu.</p>
+          <div class="map-places" aria-label="Místa na mapě">
+            <button type="button" data-map-point="1">01 · Obecní úřad</button><button type="button" data-map-point="2">02 · Fotbalové hřiště</button><button type="button" data-map-point="3">03 · Základní škola</button><button type="button" data-map-point="6">06 · Kurty u koupaliště</button>
+          </div>
+          <p class="map-caption">Značky označují existující místa, nikoli hranice projektů. Hospodaření, bydlení a zeleň jsou témata pro celou obec.</p>
+          <a class="map-external" href="https://www.openstreetmap.org/#map=15/49.1730/16.9625" target="_blank" rel="noopener">Otevřít velkou mapu v OpenStreetMap ↗</a>
         </div>
       </div>
 
       <div class="program-list" id="program-list">
-        <details class="program-item reveal" data-point="1">
-          <summary><span class="program-num">1</span><span><span class="program-title">Infokanál zpátky v provozu</span><span class="program-summary">Obecní infokanál znovu vysílá a hlášení rozhlasu dostanete do mobilu.</span></span><svg class="program-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
-          <div class="program-details">Obnovíme infokanál v obecní kabelové televizi — přehled dění, pozvánky spolků, fotky z akcí i záznamy ze zastupitelstva. Hlášení rozhlasu pošleme zároveň jako zprávu do mobilu. A pro ty, kdo internet nevedou, poběží v pondělí večer souhrn celého týdne.</div>
+
+        <details class="program-item reveal" data-point="1" id="bod-1">
+          <summary><span class="program-num">1</span><span class="program-head"><span class="program-title">Obec, která naslouchá a informuje</span><span class="program-summary">Informujeme otevřeně · nasloucháme a odpovídáme · rozhodujeme před vámi</span></span><svg class="program-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="program-body">
+            <ul class="program-points">
+              <li><b>Informujeme otevřeně</b> – o dění v obci budeme pravidelně informovat prostřednictvím webu, zpravodaje, sociálních sítí i krátkých videoreportáží. Po každém jednání zastupitelstva srozumitelně shrneme, o čem se rozhodovalo, co se podařilo, co ne a proč.</li>
+              <li><b>Nasloucháme a odpovídáme</b> – každý podnět občanů zaevidujeme a odpovíme na něj. Ne všechno lze vyřešit hned, ale každý má právo vědět, co se s jeho podnětem děje.</li>
+              <li><b>Rozhodujeme před vámi</b> – podklady k veřejnému jednání zastupitelstva zveřejníme s předstihem, zápisy doplníme o jmenovité hlasování a ze zasedání budeme pořizovat záznam dostupný občanům.</li>
+            </ul>
+            <p>U obecních projektů zveřejníme rozpočet, zdroje financování, harmonogram i důležité změny v průběhu realizace. Čísla nás zavazují a zároveň pomáhají občanům pochopit, jak projekty postupují, proč se některá rozhodnutí mění a za co obec své peníze vydává.</p>
+            <p class="program-quote script">„Chceme, aby občané věděli, co se v Letonicích chystá, o čem se rozhoduje a proč.“</p>
+            <figure class="program-figure"><img src="assets/img/sal.jpg" alt="Setkání v sále obecního domu" loading="lazy"><figcaption>Veřejné dění patří lidem – ne za zavřené dveře</figcaption></figure>
+          </div>
         </details>
-        <details class="program-item reveal" data-point="2">
-          <summary><span class="program-num">2</span><span><span class="program-title">Otevřený úřad</span><span class="program-summary">Zápisy a rozpočet online hned, ne za půl roku.</span></span><svg class="program-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
-          <div class="program-details">Zápisy a usnesení zastupitelstva zveřejníme do týdne po schválení. Rozpočet vysvětlíme srozumitelně — co se chystá, kolik to stojí a proč. Jednou měsíčně otevřené dveře na úřadě: přijďte se zeptat na cokoli, bez objednání.</div>
+
+        <details class="program-item reveal" data-point="2" id="bod-2">
+          <summary><span class="program-num">2</span><span class="program-head"><span class="program-title">Spolky, sport a život v obci</span><span class="program-summary">Podporujeme spolky a tradice · vytváříme podmínky pro sport · zlepšíme zázemí</span></span><svg class="program-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="program-body">
+            <ul class="program-points">
+              <li><b>Podporujeme spolky a tradice</b> – spravedlivě, transparentně a podle jasných pravidel. Nejde přitom jen o peníze: obec může pomáhat se zázemím, prostory, propagací akcí, vzájemnou spoluprací i hledáním financování.</li>
+              <li><b>Vytváříme podmínky pro sport</b> – pro děti, mladé i dospělé. V Letonicích působí fotbalisté, volejbalisté, stolní tenisté, karatisté, florbalisté, horolezci, příznivci Krav Maga i další skupiny. Podporovat chceme zejména zapojování dětí a mladých lidí.</li>
+              <li><b>Zlepšíme zázemí pro spolky</b> – jednou z konkrétních priorit je odpovídající zázemí pro naše hasiče, kteří dnes pro svou činnost nemají vhodné podmínky.</li>
+            </ul>
+            <p>Spolky, sportovní oddíly a lidé, kteří jim věnují svůj volný čas, dávají Letonicím život. Chceme, aby měli dobré podmínky pro svou činnost a v obci našli spolehlivého partnera. Chceme zachovat naše tradice a společenský život, podporovat to, co v Letonicích dobře funguje, a zároveň dát prostor novým aktivitám a lidem, kteří mají chuť něco dělat.</p>
+            <p class="program-quote script">„Živá obec nevzniká na obecním úřadě. Vytvářejí ji lidé, kteří jí věnují svůj čas, energii a nadšení. Úkolem obce je vytvářet jim pro to dobré podmínky.“</p>
+            <figure class="program-figure"><img src="assets/img/hody.jpg" alt="Krojovaný průvod s dechovou hudbou" loading="lazy"><figcaption>Tradice, které nám okolí závidí</figcaption></figure>
+          </div>
         </details>
-        <details class="program-item reveal" data-point="3">
-          <summary><span class="program-num">3</span><span><span class="program-title">Spolky jsou srdce obce</span><span class="program-summary">Hasiči, myslivci, TJ, Orel i zahrádkáři — víc peněz, míň papírování.</span></span><svg class="program-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
-          <div class="program-details">Navýšíme dotace spolkům a žádost zjednodušíme na jednu stránku. SDH slouží obci od roku 1895 a myslivci se starají o krajinu kolem Větrníků — zaslouží si důstojné zázemí. Sál Obecního domu budou mít spolky za symbolický nájem a akce všech spolků propojíme společným kalendářem.</div>
+
+        <details class="program-item reveal" data-point="3" id="bod-3">
+          <summary><span class="program-num">3</span><span class="program-head"><span class="program-title">Obec jako partner školy, školky a organizací, které pracují s dětmi</span><span class="program-summary">Podporujeme vzdělávání dětí · rozvíjíme jeho možnosti · jsme partnerem školy</span></span><svg class="program-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="program-body">
+            <ul class="program-points">
+              <li><b>Podporujeme vzdělávání dětí</b> – od školky až po přípravu na další studium a život. Podpora vzdělávání našich dětí je investicí do budoucnosti celé obce.</li>
+              <li><b>Rozvíjíme možnosti vzdělávání</b> – přirozený kontakt s angličtinou, rozvoj digitálních dovedností, práce s informačními technologiemi i další aktivity, které dětem rozšíří obzory. Konkrétní podobu hledáme společně s vedením školy, pedagogy a rodiči.</li>
+              <li><b>Jsme partnerem školy a školky</b> – pravidelná komunikace s vedením, naslouchání potřebám dětí, rodičů i zaměstnanců, podpora dalšího vzdělávání pedagogů a smysluplné investice do zázemí a vybavení.</li>
+            </ul>
+            <p>V souvislosti se změnami školské legislativy čekají obce v následujících letech nové požadavky na organizaci školských zařízení. Chceme se na změny připravit včas a společně s vedením školy a školky hledat řešení, které zachová to, co dobře funguje, a vytvoří prostor pro další rozvoj. Podporujeme také větší propojení školy a školky se spolky a životem obce.</p>
+            <p class="program-quote script">„Obec nemá být jen zřizovatelem. Chceme být pro vzdělávání spolehlivým partnerem.“</p>
+            <figure class="program-figure"><img src="assets/img/skola.jpg" alt="Budova základní školy v Letonicích" loading="lazy"><figcaption>Základní škola Letonice</figcaption></figure>
+          </div>
         </details>
-        <details class="program-item reveal" data-point="4">
-          <summary><span class="program-num">4</span><span><span class="program-title">Hody, plesy, kultura</span><span class="program-summary">Antonínské hody jako chlouba obce a sál, který žije celý rok.</span></span><svg class="program-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
-          <div class="program-details">Krojovaný průvod, stavění máje a třídenní Antonínské hody podpoříme penězi i rukama. Myslivecký ples s trubači, obecní ples i kapela Sebranka mají mít v sále dveře otevřené. Přidáme letní kino na návsi a pravidelná setkávání seniorů v Obecním domě.</div>
+
+        <details class="program-item reveal" data-point="4" id="bod-4">
+          <summary><span class="program-num">4</span><span class="program-head"><span class="program-title">Řádné hospodaření s obecním majetkem</span><span class="program-summary">Pečujeme o to, co máme · investujeme s rozmyslem · dotace využíváme účelně</span></span><svg class="program-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="program-body">
+            <ul class="program-points">
+              <li><b>Pečujeme o to, co máme</b> – pravidelná kontrola, údržba a včasné opravy prodlužují životnost obecního majetku a ve výsledku šetří peníze nás všech.</li>
+              <li><b>Investujeme s rozmyslem</b> – každou větší investici posoudíme podle toho, co Letonicím skutečně přinese, kolik bude stát při pořízení a jaké budou její budoucí náklady na provoz a údržbu.</li>
+              <li><b>Dotace využíváme účelně</b> – budeme aktivně hledat dotační a další možnosti financování, ale samotná možnost získat dotaci není důvodem k projektu, který obec nepotřebuje.</li>
+            </ul>
+            <p>O obecní majetek se chceme starat odpovědně, systematicky a s výhledem do budoucna. Přednost mají smysluplné projekty, které obec skutečně potřebuje a dokáže je dlouhodobě udržet. Rozhodující musí být skutečný přínos pro Letonice a dlouhodobá únosnost pro obecní rozpočet.</p>
+            <p class="program-quote script">„Dobře hospodařit neznamená jen šetřit. Znamená investovat s rozmyslem, starat se o to, co máme, a myslet několik let dopředu.“</p>
+            <figure class="program-figure"><img src="assets/img/obecni-dum.jpg" alt="Obecní dům v Letonicích" loading="lazy"><figcaption>Obecní dům</figcaption></figure>
+          </div>
         </details>
-        <details class="program-item reveal" data-point="5">
-          <summary><span class="program-num">5</span><span><span class="program-title">Škola a školka</span><span class="program-summary">Moderní třídy a dost míst pro letonické děti.</span></span><svg class="program-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
-          <div class="program-details">Postupně zmodernizujeme třídy základní školy i zázemí školky. Zasadíme se o bezpečnou cestu do školy — opravené chodníky a přehledný přechod. Družina a kroužky nastavíme tak, aby rodiče nemuseli vozit děti do Vyškova.</div>
+
+        <details class="program-item reveal" data-point="5" id="bod-5">
+          <summary><span class="program-num">5</span><span class="program-head"><span class="program-title">Dostupnost bydlení pro všechny generace</span><span class="program-summary">Využijeme připravené projekty · podpoříme bezbariérové bydlení · hledáme možnosti pro mladé rodiny</span></span><svg class="program-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="program-body">
+            <ul class="program-points">
+              <li><b>Využijeme připravené projekty</b> – obec už v minulosti investovala do projektů a plánů nové výstavby, které dosud nebyly realizovány. Prověříme, co už bylo připraveno a zaplaceno, a co dává smysl, posuneme k realizaci.</li>
+              <li><b>Podpoříme bezbariérové bydlení</b> – připravený záměr může umožnit seniorům a lidem se sníženou pohyblivostí zůstat v Letonicích, v blízkosti rodiny, přátel a prostředí, na které jsou zvyklí.</li>
+              <li><b>Budeme hledat možnosti pro mladé rodiny</b> – dostupné bydlení pro mladé páry a rodiny, které chtějí v Letonicích zůstat, s vhodným financováním a s ohledem na dlouhodobé možnosti obecního rozpočtu.</li>
+            </ul>
+            <p>Chceme, aby Letonice byly místem, kde mohou mladí založit svůj domov a senioři důstojně zůstat v prostředí, které znají a kde mají své blízké.</p>
+            <p class="program-quote script">„Do projektů už obec vložila čas i peníze. Chceme, aby smysluplné plány nekončily v šuplíku, ale proměnily se ve skutečná místa pro život.“</p>
+            <figure class="program-figure"><img src="assets/img/letonice-panorama.jpg" alt="Pohled na Letonice z polí" loading="lazy"><figcaption>Letonice – místo pro domov</figcaption></figure>
+          </div>
         </details>
-        <details class="program-item reveal" data-point="6">
-          <summary><span class="program-num">6</span><span><span class="program-title">Sport a hřiště</span><span class="program-summary">Zázemí pro fotbal i volejbal a dětské hřiště, které něco vydrží.</span></span><svg class="program-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
-          <div class="program-details">Podpoříme TJ Letonice v údržbě hřiště a kabin. Obnovíme dětské hřiště — bezpečné povrchy a herní prvky, které přežijí víc než jednu sezónu. Sportoviště otevřeme veřejnosti i mimo tréninky.</div>
+
+        <details class="program-item reveal" data-point="6" id="bod-6">
+          <summary><span class="program-num">6</span><span class="program-head"><span class="program-title">Návrat společenského života do veřejného prostoru, včetně areálu bývalého koupaliště</span><span class="program-summary">Upravíme a oživíme areál · prověříme návrat koupání · rozhodneme s občany</span></span><svg class="program-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="program-body">
+            <ul class="program-points">
+              <li><b>Upravíme a oživíme areál bývalého koupaliště</b> – prvním krokem bude prostor upravit a pravidelně udržovat tak, aby mohl znovu sloužit k setkávání, sportu, odpočinku a pořádání letních akcí.</li>
+              <li><b>Prověříme možnosti návratu koupání</b> – necháme odborně posoudit technické řešení, investiční náklady i náklady na provoz a údržbu. Od menšího řešení až po variantu přírodního koupacího biotopu.</li>
+              <li><b>Rozhodneme s občany na základě reálných čísel</b> – výsledky posouzení zveřejníme a představíme včetně předpokládaných nákladů, provozních výdajů a možností financování.</li>
+            </ul>
+            <p>Areál bývalého koupaliště je místo, které si zaslouží znovu ožít. <a href="#koupaliste">Prohlédněte si historii a návrhy areálu →</a></p>
+            <p class="program-quote script">„Naším cílem je vrátit život místu, které k Letonicím patří. Možnost návratu koupání chceme poctivě prověřit a rozhodnout se podle reálných možností obce.“</p>
+            <figure class="program-figure"><img src="assets/img/koupaliste/koupaliste-provoz.jpg" alt="Letonické koupaliště v dobách provozu, se skluzavkou" loading="lazy"><figcaption>Letonické koupaliště, jak si ho pamatujeme</figcaption></figure>
+          </div>
         </details>
-        <details class="program-item reveal" data-point="7">
-          <summary><span class="program-num">7</span><span><span class="program-title">Bydlení pro mladé</span><span class="program-summary">Stavební místa, ať mladí nemusí z Letonic pryč.</span></span><svg class="program-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
-          <div class="program-details">Připravíme obecní pozemky pro výstavbu — sítě, cesty a jasná pravidla prodeje. Mladým rodinám pomůžeme s papírováním kolem stavebního řízení. Zmapujeme prázdné domy v obci a propojíme majitele se zájemci o bydlení.</div>
+
+        <details class="program-item reveal" data-point="7" id="bod-7">
+          <summary><span class="program-num">7</span><span class="program-head"><span class="program-title">Obecní zeleň a okolní příroda nám není lhostejná</span><span class="program-summary">Místa, kde se potkáváme · hřiště, parčíky a zeleň · aktivity pro seniory · komunitní život</span></span><svg class="program-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="program-body">
+            <ul class="program-points">
+              <li><b>Udržujeme a rozšiřujeme zeleň</b> – o stromy a zeleň chceme pečovat odborně a citlivě. Pokácený strom nemá znamenat trvalou ztrátu zeleně: tam, kde to podmínky dovolí, ho nahradíme novou výsadbou a zajistíme následnou péči.</li>
+              <li><b>Opravíme a doplníme hřiště</b> – dětská a sportovní hřiště mají být bezpečná, udržovaná a pro všechny generace.</li>
+              <li><b>Vytvoříme příjemná místa v obci</b> – upravené parčíky, lavičky, zeleň, stinná místa a altánky. Náves a další prostranství nemají být jen místy, kterými procházíme.</li>
+              <li><b>Podpoříme aktivity pro seniory</b> – pravidelná setkávání, klubové činnosti a vhodné, dostupné zázemí.</li>
+              <li><b>Prověříme využití obchodního centra a obecních prostor</b> – pro služby, setkávání a spolkovou činnost.</li>
+              <li><b>Budeme rozvíjet komunitní život</b> – zázemí, které nebude patřit jedné skupině, ale bude podle jasných pravidel dostupné dětem, rodinám, seniorům, spolkům i dalším občanům.</li>
+            </ul>
+            <p>Smysluplná změna nemusí vždy znamenat velkou investici. Někdy stačí opravit hřiště, přidat lavičku, vysadit strom, vytvořit stín nebo dát nevyužitému prostoru nový smysl.</p>
+            <p class="program-quote script">„Dobrá obec nejsou jen silnice, chodníky a budovy. Tvoří ji také místa, kde se lidé potkávají, znají se a kde se společně dobře žije.“</p>
+            <figure class="program-figure"><img src="assets/img/vetrniky.jpg" alt="Krajina přírodní rezervace Větrníky nad Letonicemi" loading="lazy"><figcaption>Větrníky – koniklece a hlaváčky z našeho loga rostou tady</figcaption></figure>
+          </div>
         </details>
-        <details class="program-item reveal" data-point="8">
-          <summary><span class="program-num">8</span><span><span class="program-title">Chodníky a bezpečná silnice</span><span class="program-summary">Opravené chodníky a klidnější průjezd obcí.</span></span><svg class="program-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
-          <div class="program-details">Opravíme chodníky tam, kde jsou léta rozbité, a doplníme je, kde chybí úplně. Nasvítíme přechody a autobusové zastávky. S krajem budeme jednat o zklidnění průtahu a o lepších spojích do Vyškova a Brna.</div>
-        </details>
-        <details class="program-item reveal" data-point="9">
-          <summary><span class="program-num">9</span><span><span class="program-title">Krajina a Větrníky</span><span class="program-summary">Polní cesty, aleje a voda v krajině, která nás živí.</span></span><svg class="program-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
-          <div class="program-details">S myslivci a zemědělci obnovíme polní cesty a vysadíme aleje. Podpoříme zadržování vody v krajině — meze, tůňky a zeleň kolem potoka. Okolí Větrníků chceme udržet přístupné pro procházky i pro přírodu.</div>
-        </details>
+
       </div>
     </div>
 
-    <div class="program-download reveal">
-      <div>
-        <h3>Celý program černé na bílém</h3>
-        <p>Kompletní verze se všemi opatřeními. Devět priorit pro Letonice na pár stránek — žádné fráze.</p>
+    <div class="program-closing">
+      <div class="closing-quote reveal">
+        <p class="script">Máme plán. A chceme ho uskutečnit společně.</p>
+        <p>Otevřeně komunikovat. Odpovědně hospodařit. Pečovat o obec. Podporovat vzdělávání, spolky, sport a život mezi lidmi. Dotahovat smysluplné projekty a připravovat nové s ohledem na to, co Letonice skutečně potřebují a co si mohou dlouhodobě dovolit.</p>
       </div>
-      <a class="btn btn-primary" href="program.html">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-        Otevřít program
-      </a>
+      <div class="program-download reveal">
+        <h3>Celý program černé na bílém</h3>
+        <p>Kompletní znění všech sedmi priorit ke stažení a k vytištění. Plus náš leták, který najdete i ve schránce.</p>
+        <div class="download-row">
+          <a class="btn btn-primary" href="assets/program.pdf" download>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
+            Program (PDF)
+          </a>
+          <a class="btn btn-ghost lightbox" href="assets/img/letak-2026.jpg" data-caption="Leták LETONICE SPOLEČNĚ – komunální volby 2026">Zobrazit leták</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KOUPALIŠTĚ ============ -->
+<section class="section koupaliste" id="koupaliste">
+  <div class="wrap">
+    <p class="eyebrow">Bod 6 · srdcová záležitost</p>
+    <h2>Areál koupaliště zpět lidem</h2>
+    <p class="section-lead">Nejdřív upravit a oživit areál. Potom odborně posoudit možnosti návratu koupání. A o další podobě rozhodnout společně s občany na základě reálných čísel.</p>
+
+    <div class="koup-grid">
+      <div class="pool-showcase">
+        <div class="pool-tabs" role="group" aria-label="Pohledy na koupaliště"><button type="button" data-pool="archive" aria-pressed="true">Ze vzpomínek</button><button type="button" data-pool="proposal" aria-pressed="false">Návrh 2026</button><button type="button" data-pool="study" aria-pressed="false">Studie 2021</button></div>
+        <figure class="koup-study">
+          <a class="lightbox" id="pool-link" href="assets/img/koupaliste/koupaliste-provoz.jpg" data-caption="Koupaliště v dobách provozu. Archivní fotografie z dodaných podkladů; nezobrazuje současný stav."><img id="pool-image" src="assets/img/koupaliste/koupaliste-provoz.jpg" alt="Archivní fotografie letonického koupaliště v dobách provozu" width="1200" height="676" loading="lazy"></a>
+          <figcaption id="pool-caption"><b>Koupaliště, jak si ho pamatujeme.</b> Archivní fotografie z dob provozu, nikoli současný stav areálu.</figcaption>
+        </figure>
+        <p class="pool-disclaimer">Návrhy slouží k diskusi. Nejde o schválený projekt ani o příslib konkrétní podoby koupaliště.</p>
+      </div>
+
+      <div class="koup-side reveal">
+        <h3>Nápady z návrhu 2026</h3>
+        <ul class="chips">
+          <li>bazén 18 × 26 m</li><li>kurty: volejbal, tenis, nohejbal</li><li>beach volejbal</li><li>pétanque</li><li>stolní tenis</li><li>street workout</li><li>dětský koutek</li><li>pumptrack</li><li>ohniště a gril</li><li>šatny a bufet</li><li>čistička a solární ohřev</li><li>běžecký okruh</li><li>psí hřiště</li>
+        </ul>
+        <h3>Jak k tomu chceme přistoupit</h3>
+        <ol class="steps">
+          <li><span><b>Upravit a udržovat.</b> Areál nejdřív vyčistíme a budeme se o něj pravidelně starat, aby zase sloužil k setkávání, sportu a letním akcím.</span></li>
+          <li><span><b>Odborně posoudit varianty.</b> Od menšího řešení po přírodní koupací biotop – včetně technického řešení, ceny stavby i nákladů na provoz a údržbu.</span></li>
+          <li><span><b>Zveřejnit čísla a rozhodnout společně.</b> Výsledky představíme občanům a o další podobě areálu rozhodneme na základě reálných možností obce.</span></li>
+        </ol>
+      </div>
+    </div>
+
+    <h3 class="gallery-title">Jak to bylo</h3>
+    <p class="gallery-sub">Koupaliště v Letonicích vznikalo a žilo díky lidem z obce – brigády, turnaje, léta u vody. Z rodinných archivů.</p>
+    <div class="gallery reveal">
+      <figure><a class="lightbox" href="assets/img/koupaliste/historie-stavba.jpg" data-caption="Stavba koupaliště – archivní snímek"><img src="assets/img/koupaliste/historie-stavba.jpg" alt="Archivní černobílý snímek ze stavby koupaliště" loading="lazy"></a><figcaption><b>Archiv</b> · stavba koupaliště</figcaption></figure>
+      <figure><a class="lightbox" href="assets/img/koupaliste/1978-brigada.jpg" data-caption="Brigáda na koupališti, 1978"><img src="assets/img/koupaliste/1978-brigada.jpg" alt="Brigáda na koupališti v roce 1978" loading="lazy"></a><figcaption><b>1978</b> · brigáda</figcaption></figure>
+      <figure><a class="lightbox" href="assets/img/koupaliste/1999-brigada.jpg" data-caption="Brigáda na koupališti, 1999"><img src="assets/img/koupaliste/1999-brigada.jpg" alt="Brigáda na koupališti v roce 1999" loading="lazy"></a><figcaption><b>1999</b> · brigáda</figcaption></figure>
+      <figure><a class="lightbox" href="assets/img/koupaliste/2001-brigada.jpg" data-caption="Brigáda na koupališti, 2001"><img src="assets/img/koupaliste/2001-brigada.jpg" alt="Brigáda na koupališti v roce 2001" loading="lazy"></a><figcaption><b>2001</b> · brigáda</figcaption></figure>
+      <figure><a class="lightbox" href="assets/img/koupaliste/2002-brigada.jpg" data-caption="Brigáda na koupališti, 2002"><img src="assets/img/koupaliste/2002-brigada.jpg" alt="Brigáda na koupališti v roce 2002" loading="lazy"></a><figcaption><b>2002</b> · brigáda</figcaption></figure>
+      <figure><a class="lightbox" href="assets/img/koupaliste/2004-turnaj.jpg" data-caption="Turnaj na koupališti, 2004"><img src="assets/img/koupaliste/2004-turnaj.jpg" alt="Volejbalový turnaj na koupališti v roce 2004" loading="lazy"></a><figcaption><b>2004</b> · turnaj</figcaption></figure>
+      <figure><a class="lightbox" href="assets/img/koupaliste/2005-turnaj.jpg" data-caption="Turnaj na koupališti, 2005"><img src="assets/img/koupaliste/2005-turnaj.jpg" alt="Účastníci turnaje na koupališti v roce 2005" loading="lazy"></a><figcaption><b>2005</b> · turnaj</figcaption></figure>
+      <figure><a class="lightbox" href="assets/img/koupaliste/2006-nohejbal.jpg" data-caption="Nohejbal na koupališti, 2006"><img src="assets/img/koupaliste/2006-nohejbal.jpg" alt="Nohejbal na kurtu u koupaliště v roce 2006" loading="lazy"></a><figcaption><b>2006</b> · nohejbal</figcaption></figure>
+    </div>
+
+    <h3 class="gallery-title">Inspirace odjinud</h3>
+    <p class="gallery-sub">Menší bazén, sportoviště kolem a místo k posezení – tak to funguje v obcích podobných té naší. Přesně tyhle varianty chceme nechat odborně posoudit.</p>
+    <div class="gallery reveal">
+      <figure><a class="lightbox" href="assets/img/koupaliste/inspirace-bystrice.jpg" data-caption="Koupaliště v Bystřici"><img src="assets/img/koupaliste/inspirace-bystrice.jpg" alt="Obecní koupaliště v Bystřici" loading="lazy"></a><figcaption><b>Bystřice</b></figcaption></figure>
+      <figure><a class="lightbox" href="assets/img/koupaliste/inspirace-uhrice.jpg" data-caption="Koupaliště v Uhřicích"><img src="assets/img/koupaliste/inspirace-uhrice.jpg" alt="Koupaliště v Uhřicích" loading="lazy"></a><figcaption><b>Uhřice</b></figcaption></figure>
+      <figure><a class="lightbox" href="assets/img/koupaliste/inspirace-vsetin.jpg" data-caption="Koupaliště ve Vsetíně"><img src="assets/img/koupaliste/inspirace-vsetin.jpg" alt="Koupaliště ve Vsetíně" loading="lazy"></a><figcaption><b>Vsetín</b></figcaption></figure>
+      <figure><a class="lightbox" href="assets/img/koupaliste/studie-starsi-vizualizace.jpg" data-caption="Vizualizace „Sportovně relaxační areál s vodní plochou“ – starší návrh pro Letonice"><img src="assets/img/koupaliste/studie-starsi-vizualizace.jpg" alt="Vizualizace sportovně relaxačního areálu s vodní plochou" loading="lazy"></a><figcaption><b>Letonice</b> · starší návrh areálu</figcaption></figure>
     </div>
   </div>
 </section>
 
 <!-- ============ KANDIDÁTI ============ -->
-<section class="section" id="kandidati">
+<section class="section section-alt" id="kandidati">
   <div class="wrap">
-    <p class="eyebrow">Kandidátka</p>
+    <p class="eyebrow">Kandidátka · SNK „LETONICE SPOLEČNĚ“</p>
     <h2>Lidé, které znáte</h2>
-    <p class="section-lead">Patnáct sousedů z Letonic, kteří se rozhodli nabídnout obci své zkušenosti.</p>
+    <p class="section-lead">Patnáct sousedů z Letonic, všichni bez politické příslušnosti. Pořadí a údaje podle dodané kandidátky.</p>
 
-    <div class="leader-card reveal">
-      <div class="avatar" aria-hidden="true">PS</div>
-      <div>
+    <article class="leader-card reveal">
+      <div class="cand-photo"><img src="assets/kandidati/01-petr-skokan.jpg" alt="Petr Skokan" width="600" height="800"></div>
+      <div class="leader-body">
         <p class="leader-role">Lídr kandidátky · č. 1</p>
-        <h3>Petr Skokan <span style="font-weight:400; font-size:1.05rem; color:var(--ink-soft)">· 50 let · strojník</span></h3>
+        <h3>Petr Skokan</h3>
+        <p class="leader-meta">50 let · strojník · Letonice</p>
+        <p class="leader-note">Vede kandidátku, kterou spojuje jedna věc: v Letonicích žijeme a chceme, aby se tu dobře žilo i dál. Rozumně, otevřeně a s plánem, který si obec může dovolit.</p>
       </div>
-    </div>
+    </article>
 
     <div class="candidates-grid">
-      <div class="candidate-card reveal"><div class="avatar" aria-hidden="true">ZT</div><h3>2. Bc. Zdeňka Trnková</h3><p class="candidate-meta">45 let · HR manažer</p></div>
-      <div class="candidate-card reveal"><div class="avatar" aria-hidden="true">MH</div><h3>3. Mgr. Miluše Hálová</h3><p class="candidate-meta">38 let · právník, notářská koncipientka</p></div>
-      <div class="candidate-card reveal"><div class="avatar" aria-hidden="true">JD</div><h3>4. Jaroslav Dekýš</h3><p class="candidate-meta">44 let · truhlář, operátor CNC</p></div>
-      <div class="candidate-card reveal"><div class="avatar" aria-hidden="true">JJ</div><h3>5. Jan Ježorek</h3><p class="candidate-meta">75 let · důchodce, OSVČ</p></div>
-      <div class="candidate-card reveal"><div class="avatar" aria-hidden="true">KB</div><h3>6. Mgr. Kristýna Brtníková</h3><p class="candidate-meta">40 let · učitelka na základní škole</p></div>
-      <div class="candidate-card reveal"><div class="avatar" aria-hidden="true">ZK</div><h3>7. Zuzana Kachlíková</h3><p class="candidate-meta">41 let · bankovní poradce</p></div>
-      <div class="candidate-card reveal"><div class="avatar" aria-hidden="true">JK</div><h3>8. Ing. Jaroslav Krontorád</h3><p class="candidate-meta">54 let · IT analytik</p></div>
-      <div class="candidate-card reveal"><div class="avatar" aria-hidden="true">AH</div><h3>9. Aleš Hanák</h3><p class="candidate-meta">39 let · ředitel společnosti</p></div>
-      <div class="candidate-card reveal"><div class="avatar" aria-hidden="true">VK</div><h3>10. Veronika Klimešová</h3><p class="candidate-meta">38 let · referent kvality</p></div>
-      <div class="candidate-card reveal"><div class="avatar" aria-hidden="true">PT</div><h3>11. Mgr. Petr Tomek</h3><p class="candidate-meta">25 let · analytik kybernetické bezpečnosti</p></div>
-      <div class="candidate-card reveal"><div class="avatar" aria-hidden="true">JL</div><h3>12. Jaroslav Lučan</h3><p class="candidate-meta">41 let · vedoucí prodejny stavebnin</p></div>
-      <div class="candidate-card reveal"><div class="avatar" aria-hidden="true">JM</div><h3>13. Jaroslav Malovec</h3><p class="candidate-meta">43 let · pracovník v zemědělství</p></div>
-      <div class="candidate-card reveal"><div class="avatar" aria-hidden="true">LL</div><h3>14. Ladislav Lefner</h3><p class="candidate-meta">43 let · dělník</p></div>
-      <div class="candidate-card reveal"><div class="avatar" aria-hidden="true">PS</div><h3>15. Pavel Selinger</h3><p class="candidate-meta">56 let · podnikatel</p></div>
-    </div>  </div>
+      <article class="candidate-card reveal">
+        <div class="cand-photo"><img src="assets/kandidati/02-zdenka-trnkova.jpg" alt="Zdeňka Trnková" loading="lazy" width="600" height="800"></div><span class="cand-num">2</span>
+        <div class="cand-body"><h3>Bc. Zdeňka Trnková</h3><p class="candidate-meta">45 let · HR manažer</p><p class="cand-motto script">„Tady jsem vyrostla. Tady žiji. A záleží mi na budoucnosti Letonic.“</p></div>
+      </article>
+      <article class="candidate-card reveal">
+        <div class="cand-photo"><img src="assets/kandidati/03-miluse-halova.jpg" alt="Miluše Hálová" loading="lazy" width="600" height="800"></div><span class="cand-num">3</span>
+        <div class="cand-body"><h3>Mgr. Miluše Hálová</h3><p class="candidate-meta">38 let · právník, notářská koncipientka</p></div>
+      </article>
+      <article class="candidate-card reveal">
+        <div class="cand-photo"><img src="assets/kandidati/04-jaroslav-dekys.jpg" alt="Jaroslav Dekýš" loading="lazy" width="600" height="800"></div><span class="cand-num">4</span>
+        <div class="cand-body"><h3>Jaroslav Dekýš</h3><p class="candidate-meta">44 let · truhlář, operátor CNC</p><p class="cand-motto script">„Kořeny mám jinde. Domov mám tady.“</p></div>
+      </article>
+      <article class="candidate-card reveal">
+        <div class="cand-photo"><img src="assets/kandidati/05-jan-jezorek.jpg" alt="Jan Ježorek" loading="lazy" width="600" height="800"></div><span class="cand-num">5</span>
+        <div class="cand-body"><h3>Jan Ježorek</h3><p class="candidate-meta">75 let · důchodce, OSVČ</p></div>
+      </article>
+      <article class="candidate-card reveal">
+        <div class="cand-photo"><img src="assets/kandidati/06-kristyna-brtnikova.jpg" alt="Kristýna Brtníková" loading="lazy" width="600" height="800"></div><span class="cand-num">6</span>
+        <div class="cand-body"><h3>Mgr. Kristýna Brtníková</h3><p class="candidate-meta">40 let · učitelka na základní škole</p></div>
+      </article>
+      <article class="candidate-card reveal">
+        <div class="cand-photo"><img src="assets/kandidati/07-zuzana-kachlikova.jpg" alt="Zuzana Kachlíková" loading="lazy" width="600" height="800"></div><span class="cand-num">7</span>
+        <div class="cand-body"><h3>Zuzana Kachlíková</h3><p class="candidate-meta">41 let · bankovní poradce</p></div>
+      </article>
+      <article class="candidate-card reveal">
+        <div class="cand-photo"><img src="assets/kandidati/08-jaroslav-krontorad.jpg" alt="Jaroslav Krontorád" loading="lazy" width="600" height="800"></div><span class="cand-num">8</span>
+        <div class="cand-body"><h3>Ing. Jaroslav Krontorád</h3><p class="candidate-meta">54 let · IT analytik</p></div>
+      </article>
+      <article class="candidate-card reveal">
+        <div class="cand-photo"><img src="assets/kandidati/09-ales-hanak.jpg" alt="Aleš Hanák" loading="lazy" width="600" height="800"></div><span class="cand-num">9</span>
+        <div class="cand-body"><h3>Aleš Hanák</h3><p class="candidate-meta">39 let · ředitel společnosti</p></div>
+      </article>
+      <article class="candidate-card reveal">
+        <div class="cand-photo"><img src="assets/kandidati/10-veronika-klimesova.jpg" alt="Veronika Klimešová" loading="lazy" width="600" height="800"></div><span class="cand-num">10</span>
+        <div class="cand-body"><h3>Veronika Klimešová</h3><p class="candidate-meta">38 let · referent kvality</p></div>
+      </article>
+      <article class="candidate-card reveal">
+        <div class="cand-photo"><img src="assets/kandidati/11-petr-tomek.jpg" alt="Petr Tomek" loading="lazy" width="600" height="800"></div><span class="cand-num">11</span>
+        <div class="cand-body"><h3>Mgr. Petr Tomek</h3><p class="candidate-meta">25 let · analytik kybernetické bezpečnosti</p></div>
+      </article>
+      <article class="candidate-card reveal">
+        <div class="cand-photo"><div class="cand-placeholder" aria-hidden="true">JL</div></div><span class="cand-num">12</span>
+        <div class="cand-body"><h3>Jaroslav Lučan</h3><p class="candidate-meta">41 let · vedoucí prodejny stavebnin</p></div>
+      </article>
+      <article class="candidate-card reveal">
+        <div class="cand-photo"><img src="assets/kandidati/13-jaroslav-malovec.jpg" alt="Jaroslav Malovec" loading="lazy" width="600" height="800"></div><span class="cand-num">13</span>
+        <div class="cand-body"><h3>Jaroslav Malovec</h3><p class="candidate-meta">43 let · pracovník v zemědělství</p></div>
+      </article>
+      <article class="candidate-card reveal">
+        <div class="cand-photo"><img src="assets/kandidati/14-ladislav-lefner.jpg" alt="Ladislav Lefner" loading="lazy" width="600" height="800"></div><span class="cand-num">14</span>
+        <div class="cand-body"><h3>Ladislav Lefner</h3><p class="candidate-meta">43 let · dělník</p></div>
+      </article>
+      <article class="candidate-card reveal">
+        <div class="cand-photo"><div class="cand-placeholder" aria-hidden="true">PS</div></div><span class="cand-num">15</span>
+        <div class="cand-body"><h3>Pavel Selinger</h3><p class="candidate-meta">56 let · podnikatel</p></div>
+      </article>
+    </div>
+    <p class="candidates-note">Všichni kandidáti: bydliště Letonice · politická příslušnost: bez politické příslušnosti (BEZPP).</p>
+  </div>
 </section>
 
-<!-- ============ AKTUALITY ============ -->
-<section class="section section-alt" id="aktuality">
+<!-- ============ JAK VOLIT ============ -->
+<section class="section" id="jak-volit">
   <div class="wrap">
-    <p class="eyebrow">Z kampaně</p>
-    <h2>Co se děje</h2>
-    <div class="news-grid">
-      <article class="news-card reveal">
-        <p class="news-date">3. srpna 2026</p>
-        <h3>Kandidátka je připravena</h3>
-        <p>LETONICE SPOLEČNĚ představují patnáct kandidátů bez politické příslušnosti.</p>
-      </article>
-      <article class="news-card reveal">
-        <p class="news-date">9.–10. října 2026</p>
-        <h3>Termín komunálních voleb</h3>
-        <p>Volební místnosti budou otevřené v pátek od 14 do 22 hodin a v sobotu od 8 do 14 hodin.</p>
-      </article>
-      <article class="news-card reveal">
-        <p class="news-date">Program 2026–2030</p>
-        <h3>Devět priorit pro Letonice</h3>
-        <p>Program spojuje péči o obec, podporu spolků, školu, sport, bezpečnost i krajinu.</p>
-      </article>
-    </div>  </div>
-</section>
+    <p class="eyebrow">Praktické informace</p>
+    <h2>Jak volit v komunálních volbách</h2>
+    <p class="section-lead">Komunální volby mají jiná pravidla než ty sněmovní: máte tolik hlasů, kolik má zastupitelstvo členů. V Letonicích se volí 15 zastupitelů – a jeden křížek u názvu sdružení je hlas všem našim patnácti kandidátům.</p>
 
-<!-- ============ KONTAKT ============ -->
-<section class="section join" id="pridejte-se">
-  <div class="wrap">
-    <div class="join-grid">
+    <div class="vote-grid">
       <div class="reveal">
-        <p class="eyebrow">Kontakt</p>
-        <h2>Kontaktní údaje doplníme po jejich finálním potvrzení.</h2>
-        <p>Na této stránce nezveřejňujeme nepotvrzené kontakty, termíny akcí ani číslo volebního účtu.</p>
+        <div class="vote-facts">
+          <div class="fact"><small>Kdy</small><b>pá 9. 10. · 14–22 h<br>so 10. 10. · 8–14 h</b><span>Komunální volby 2026</span></div>
+          <div class="fact"><small>Kde</small><b>Volební místnost v Letonicích</b><span>přesnou adresu a pokyny najdete v oznámení obce; voličský průkaz nelze použít</span></div>
+          <div class="fact"><small>Co s sebou</small><b>Občanský průkaz<br>nebo cestovní pas</b><span>hlasovací lístek přijde do schránky, náhradní dostanete v místnosti</span></div>
+        </div>
+
+        <ol class="vote-ways">
+          <li class="best"><span><b>Křížek u názvu LETONICE SPOLEČNĚ</b>Označíte jen velký čtvereček u názvu našeho sdružení. Hlas tím dostane všech 15 našich kandidátů – to je pro nás nejsilnější podpora.</span></li>
+          <li><span><b>Křížky u jednotlivých kandidátů</b>Můžete označit až 15 konkrétních lidí napříč všemi kandidátkami. Hlas dostane jen ten, u koho je křížek.</span></li>
+          <li><span><b>Kombinace</b>Křížek u jednoho sdružení + křížky u jednotlivců z jiných kandidátek. Označení jednotlivci dostanou hlas přednostně, označené sdružení pak hlasy pro tolik kandidátů od shora, kolik zbývá do 15.</span></li>
+        </ol>
+        <p class="vote-source"><a href="https://mv.gov.cz/volby/clanek/volby-do-zastupitelstev-obci-a-senatu-2026.aspx" target="_blank" rel="noopener">Oficiální informace k volbám · Ministerstvo vnitra ↗</a> · <a href="https://www.letonice.cz/" target="_blank" rel="noopener">Oznámení obce ↗</a></p>
+        <p class="vote-warning">Pozor: pokud označíte sdružení a zároveň křížkujete jeho vlastní kandidáty, křížky u kandidátů se nepočítají – platí jen hlas pro sdružení. Lístek s více než jedním označeným sdružením nebo s více označenými kandidáty, než je volených zastupitelů, je neplatný.</p>
       </div>
-      <div class="contact-box reveal">
-        <h3>Informace ke kandidátce</h3>
-        <p>Sdružení nezávislých kandidátů „LETONICE SPOLEČNĚ“.</p>
-        <p>Zmocněnec volební strany: Antonín Skokan.</p>
+
+      <div class="ballot reveal" aria-hidden="true">
+        <div class="ballot-head"><span>Ukázka označení lístku</span><span>Letonice · 2026</span></div>
+        <div class="ballot-party">
+          <span class="box">✕</span>
+          <span><b>Sdružení nezávislých kandidátů LETONICE SPOLEČNĚ</b><small>15 kandidátů · BEZPP</small></span>
+        </div>
+        <ol class="ballot-cands">
+          <li>1. Petr Skokan</li><li>2. Zdeňka Trnková</li><li>3. Miluše Hálová</li><li>4. Jaroslav Dekýš</li><li>5. Jan Ježorek</li><li>6. Kristýna Brtníková</li><li>7. Zuzana Kachlíková</li><li>8. Jaroslav Krontorád</li><li>9. Aleš Hanák</li><li>10. Veronika Klimešová</li><li>11. Petr Tomek</li><li>12. Jaroslav Lučan</li><li>13. Jaroslav Malovec</li><li>14. Ladislav Lefner</li><li>15. Pavel Selinger</li>
+        </ol>
+        <p class="ballot-note">Jeden křížek nahoře = hlas všem patnácti.</p>
       </div>
     </div>
   </div>
 </section>
+
+<!-- ============ SLOGAN ============ -->
+<div class="band">
+  <div class="wrap">
+    <p class="script">Protože máme Letonice rádi. A máme plán.</p>
+    <p>Rozumně. Otevřeně. Pro Letonice. Přijďte 9. a 10. října k volbám.</p>
+  </div>
+</div>
+
+<!-- ============ PŘIDEJTE SE / KONTAKT ============ -->
+<section class="section join" id="pridejte-se">
+  <div class="wrap">
+    <div class="join-grid">
+      <div class="reveal">
+        <p class="eyebrow">Přidejte se</p>
+        <h2>Kampaň děláme po práci a po večerech. Každá ruka i každý nápad se počítá.</h2>
+        <ul class="join-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Řekněte nám, co vás v Letonicích trápí a co byste změnili</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Zastavte kohokoli z nás na ulici – rádi si popovídáme</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Pomozte s roznosem letáků ve své ulici</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>A 9.–10. října přijďte k volbám</li>
+        </ul>
+        <div class="contact-lines">
+          <span>Sdružení nezávislých kandidátů LETONICE SPOLEČNĚ · Letonice, okres Vyškov</span>
+        </div>
+      </div>
+      <div class="contact-box reveal contact-personal"><span class="eyebrow">Jsme vaši sousedé</span><h3>Pojďme si promluvit osobně.</h3><p>Máte dotaz k programu nebo nápad pro Letonice? Oslovte kohokoli z našich kandidátů. Rádi si vás poslechneme.</p><a class="btn btn-light" href="#kandidati">Poznat naše kandidáty ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <!-- ============ PATIČKA ============ -->
 <footer class="footer">
   <div class="wrap footer-inner">
-    <p class="footer-legal">© 2026 LETONICE SPOLEČNĚ — sdružení nezávislých kandidátů.<br> Zadavatel a zpracovatel: LETONICE SPOLEČNĚ. Zmocněnec: Antonín Skokan.<br> <a href="program.html">Volební program</a></p>
+    <div class="footer-brand"><img src="assets/img/logo-512.png" alt="" width="40" height="40">LETONICE SPOLEČNĚ</div>
+    <p class="footer-legal">© 2026 Sdružení nezávislých kandidátů LETONICE SPOLEČNĚ.<br>
+    Zadavatel a zpracovatel: SNK LETONICE SPOLEČNĚ.<br>
+    <a href="assets/program.pdf" download>Volební program (PDF)</a> · <a href="assets/letak-letonice-spolecne-2026.png" download>Leták (PNG)</a></p>
     <p>Tento web nepoužívá sledovací cookies.</p>
   </div>
 </footer>
 
-<script src="script.js"></script>
+<dialog class="lightbox-dialog" id="lightbox" aria-label="Zvětšený obrázek">
+  <button class="lightbox-close" type="button" aria-label="Zavřít">×</button>
+  <div class="lightbox-navigation"><button type="button" class="lightbox-prev" aria-label="Předchozí obrázek">←</button><span class="lightbox-count" aria-live="polite"></span><button type="button" class="lightbox-next" aria-label="Další obrázek">→</button></div><figure><img alt=""><figcaption></figcaption></figure>
+</dialog>
+
+<script defer src="assets/vendor/leaflet/leaflet.js"></script>
+<script defer src="script.js"></script>
 </body>
 </html>
+

@@ -1,139 +1,37 @@
-/* SPOLEČNĚ PRO MĚSTO — interakce */
-(function () {
-  "use strict";
-
-  /* ---------- mobilní menu ---------- */
-  var toggle = document.querySelector(".nav-toggle");
-  var menu = document.getElementById("nav-menu");
-  if (toggle && menu) {
-    toggle.addEventListener("click", function () {
-      var open = menu.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
-    });
-    menu.addEventListener("click", function (e) {
-      if (e.target.tagName === "A") {
-        menu.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
-      }
-    });
-  }
-
-  /* ---------- odpočet do voleb (pá 9. 10. 2026, 14:00 SELČ) ---------- */
-  var target = new Date("2026-10-09T14:00:00+02:00").getTime();
-  var elDays = document.getElementById("cd-days");
-  var elHours = document.getElementById("cd-hours");
-  var elMins = document.getElementById("cd-mins");
-
-  function tick() {
-    var diff = target - Date.now();
-    if (diff <= 0) {
-      elDays.textContent = "0";
-      elHours.textContent = "0";
-      elMins.textContent = "0";
-      return;
-    }
-    elDays.textContent = String(Math.floor(diff / 86400000));
-    elHours.textContent = String(Math.floor(diff / 3600000) % 24);
-    elMins.textContent = String(Math.floor(diff / 60000) % 60);
-  }
-  if (elDays) {
-    tick();
-    setInterval(tick, 30000);
-  }
-
-  /* ---------- mapa <-> program ---------- */
-  var map = document.getElementById("town-map");
-  var pins = document.querySelectorAll(".map-pin");
-  var items = document.querySelectorAll(".program-item");
-
-  function setActive(point) {
-    map.classList.toggle("has-active", point !== null);
-    pins.forEach(function (p) {
-      p.classList.toggle("active", p.dataset.point === point);
-    });
-    items.forEach(function (it) {
-      it.classList.toggle("active", it.dataset.point === point);
-    });
-  }
-
-  items.forEach(function (it) {
-    it.addEventListener("mouseenter", function () { setActive(it.dataset.point); });
-    it.addEventListener("mouseleave", function () { setActive(null); });
-    it.addEventListener("focusin", function () { setActive(it.dataset.point); });
-  });
-
-  pins.forEach(function (pin) {
-    function activate() {
-      var point = pin.dataset.point;
-      setActive(point);
-      var item = document.querySelector('.program-item[data-point="' + point + '"]');
-      if (item) {
-        item.open = true;
-        item.scrollIntoView({ behavior: "smooth", block: "nearest" });
-      }
-    }
-    pin.addEventListener("click", activate);
-    pin.addEventListener("keydown", function (e) {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        activate();
-      }
-    });
-    pin.addEventListener("mouseenter", function () { setActive(pin.dataset.point); });
-    pin.addEventListener("mouseleave", function () { setActive(null); });
-  });
-
-  /* ---------- scroll reveal ---------- */
-  /* prvky už ve viewportu ukážeme hned; observer jen pro ty pod ohybem */
-  var reveals = document.querySelectorAll(".reveal");
-  var vh = window.innerHeight || 800;
-  var pending = [];
-  reveals.forEach(function (el) {
-    var r = el.getBoundingClientRect();
-    if (r.top < vh && r.bottom > 0) el.classList.add("in");
-    else pending.push(el);
-  });
-  if ("IntersectionObserver" in window && pending.length) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("in");
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    pending.forEach(function (el) { io.observe(el); });
-  } else {
-    pending.forEach(function (el) { el.classList.add("in"); });
-  }
-
-  /* ---------- formulář (demo bez backendu) ---------- */
-  var form = document.getElementById("join-form");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var name = document.getElementById("f-name").value.trim();
-      var email = document.getElementById("f-email").value.trim();
-      if (!name || !email || email.indexOf("@") < 1) {
-        alertBox("Vyplňte prosím jméno a platný e-mail.");
-        return;
-      }
-      form.innerHTML =
-        '<p style="font-size:1.15rem; font-weight:700; margin-bottom:0.5rem">Díky, ' +
-        escapeHtml(name.split(" ")[0]) +
-        '! 🎉</p><p style="color:rgba(248,244,236,.75)">Ozveme se vám co nejdřív. Zatím to řekněte sousedům — a 9.–10. října přijďte k volbám.</p>';
-    });
-  }
-
-  function alertBox(msg) {
-    var note = form.querySelector(".form-note");
-    note.textContent = msg;
-    note.style.color = "#F5B841";
-  }
-
-  function escapeHtml(s) {
-    return s.replace(/[&<>"']/g, function (c) {
-      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
-    });
-  }
+/* LETONICE SPOLEČNĚ — accessible, progressively enhanced interactions. */
+(function(){
+'use strict';
+const $=(s)=>document.querySelector(s),$$=(s)=>Array.from(document.querySelectorAll(s));
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const toggle=$('.nav-toggle'),menu=$('#nav-menu');
+function closeMenu(){if(!toggle||!menu)return;menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Otevřít menu');}
+if(toggle&&menu){toggle.addEventListener('click',()=>{const open=menu.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Zavřít menu':'Otevřít menu');});menu.addEventListener('click',e=>{if(e.target.closest('a'))closeMenu();});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.classList.contains('open')){closeMenu();toggle.focus();}});document.addEventListener('click',e=>{if(!e.target.closest('.nav'))closeMenu();});}
+const start=Date.parse('2026-10-09T14:00:00+02:00'),finish=Date.parse('2026-10-10T14:00:00+02:00');
+function tick(){if(!$('#cd-days'))return;const diff=Math.max(0,start-Date.now());$('#cd-days').textContent=Math.floor(diff/86400000);$('#cd-hours').textContent=Math.floor(diff/3600000)%24;$('#cd-mins').textContent=Math.floor(diff/60000)%60;if(Date.now()>=start){$('#countdown').innerHTML='<p class="election-state">'+(Date.now()<finish?'Probíhají volební dny':'Hlasování skončilo')+'</p>';clearInterval(timer);}}
+let timer=setInterval(tick,30000);tick();
+const places={
+'1':{lat:49.1774412,lon:16.9586498,name:'Obecní úřad Letonice',source:'https://www.openstreetmap.org/way/166913349'},
+'2':{lat:49.1738475,lon:16.9655994,name:'Fotbalové hřiště TJ Letonice',source:'https://www.openstreetmap.org/way/163805917'},
+'3':{lat:49.1758398,lon:16.9633898,name:'Základní škola Letonice',source:'https://www.openstreetmap.org/node/13970694587'},
+'6':{lat:49.1672831,lon:16.9659522,name:'Volejbalové kurty u bývalého koupaliště',source:'https://www.openstreetmap.org/way/167297697'}
+};
+const wholeNotes={'4':'Odpovědné hospodaření se týká majetku celé obce.','5':'Bydlení: konkrétní pozemky v podkladech nejsou jednoznačně vymezené, proto je na mapě neoznačujeme.','7':'Zeleň a místa pro setkávání jsou tématem celé obce a jejího okolí.'};
+let townMap=null,activePoint=null,markers={};const bounds=[[49.1658,16.9535],[49.1808,16.9715]];
+function fit(){if(townMap)townMap.fitBounds(bounds,{padding:[22,22],animate:!reduced});}
+function select(point,move){activePoint=point;$$('.program-item').forEach(el=>el.classList.toggle('active',el.dataset.point===point));$$('[data-map-point]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mapPoint===point)));Object.entries(markers).forEach(([n,m])=>m.getElement()?.classList.toggle('is-active',n===point));const info=$('#map-status');if(info)info.textContent=places[point]?places[point].name+' · související bod programu '+point:wholeNotes[point]||'Vyberte místo nebo bod programu.';if(townMap&&move){if(places[point]){townMap.setView([places[point].lat,places[point].lon],16,{animate:!reduced});markers[point].openPopup();}else {townMap.closePopup();fit();}}}
+function openPoint(point,scroll){const item=$('.program-item[data-point="'+point+'"]');if(!item)return;item.open=true;select(point,true);if(scroll)item.scrollIntoView({behavior:reduced?'auto':'smooth',block:'start'});}
+function initMap(){const el=$('#town-map');if(!el||townMap)return;if(!window.L){el.innerHTML='<p class="map-loading">Mapu se nepodařilo načíst. Použijte odkaz na velkou mapu níže; program je dostupný i bez mapy.</p>';return;}
+el.replaceChildren();townMap=L.map(el,{scrollWheelZoom:false,zoomControl:true});fit();const layer=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(townMap);L.control.scale({imperial:false}).addTo(townMap);let failed=0;layer.on('tileerror',()=>{if(++failed>=3)$('#map-status').textContent='Mapový podklad je nyní nedostupný. Zkuste otevřít velkou mapu odkazem níže.';});layer.on('tileload',()=>{failed=0;});
+Object.entries(places).forEach(([point,p])=>{const m=L.marker([p.lat,p.lon],{icon:L.divIcon({className:'place-marker',html:point,iconSize:[38,38],iconAnchor:[19,19]}),title:p.name,alt:p.name,keyboard:true}).addTo(townMap);m.bindPopup('<b>'+p.name+'</b><br><a href="#bod-'+point+'">Přečíst bod '+point+' programu →</a><br><a href="'+p.source+'" target="_blank" rel="noopener">Poloha v OpenStreetMap ↗</a>');m.on('click',()=>{openPoint(point,false);});markers[point]=m;});if(window.ResizeObserver)new ResizeObserver(()=>townMap.invalidateSize({pan:false})).observe(el);if(activePoint)select(activePoint,true);}
+if($('#town-map')){if('IntersectionObserver'in window){const io=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){initMap();io.disconnect();}},{rootMargin:'300px'});io.observe($('#town-map'));}else initMap();}
+$$('[data-map-point]').forEach(b=>b.addEventListener('click',()=>{initMap();openPoint(b.dataset.mapPoint,false);}));$('#map-reset')?.addEventListener('click',()=>{initMap();select(null,false);townMap?.closePopup();fit();});
+$$('.program-item').forEach(item=>{item.addEventListener('toggle',()=>{if(item.open)select(item.dataset.point,true);});});
+function hash(){const m=/^#bod-(\d+)$/.exec(location.hash);if(m)openPoint(m[1],true);}hash();window.addEventListener('hashchange',hash);
+const pool={archive:{src:'assets/img/koupaliste/koupaliste-provoz.jpg',alt:'Archivní fotografie letonického koupaliště v dobách provozu',title:'Koupaliště, jak si ho pamatujeme.',caption:'Archivní fotografie z dob provozu, nikoli současný stav areálu.'},proposal:{src:'assets/img/koupaliste-studie-2030-full.jpg',alt:'Pracovní návrh uspořádání areálu koupaliště od Jana Ježorka, 2026',title:'Pracovní návrh · Jan Ježorek, 2026.',caption:'Jedna z variant k veřejné diskusi. Zobrazené vybavení ani rozměry nejsou schváleným projektem.'},study:{src:'assets/img/koupaliste/studie-starsi-vizualizace.jpg',alt:'Architektonická studie sportovně relaxačního areálu Letonice od ateliéru DIMENSE z května 2021',title:'Starší architektonická studie · DIMENSE, 2021.',caption:'Vizualizace z dodaných podkladů. Není fotografií současného stavu ani novým schváleným návrhem.'}};
+$$('[data-pool]').forEach(b=>b.addEventListener('click',()=>{const p=pool[b.dataset.pool];$$('[data-pool]').forEach(t=>t.setAttribute('aria-pressed',String(t===b)));$('#pool-image').src=p.src;$('#pool-image').alt=p.alt;$('#pool-link').href=p.src;$('#pool-link').dataset.caption=p.title+' '+p.caption;const caption=$('#pool-caption');caption.replaceChildren();const strong=document.createElement('b');strong.textContent=p.title;caption.append(strong,' '+p.caption);}));
+const dialog=$('#lightbox');let group=[],index=0,opener=null;
+function displayImage(){const link=group[index];dialog.querySelector('img').src=link.href;dialog.querySelector('img').alt=link.dataset.caption||link.querySelector('img')?.alt||'';dialog.querySelector('figcaption').textContent=link.dataset.caption||'';$('.lightbox-count').textContent=(index+1)+' / '+group.length;$('.lightbox-navigation').hidden=group.length<2;}
+function step(d){index=(index+d+group.length)%group.length;displayImage();}
+if(dialog&&typeof dialog.showModal==='function'){$$('a.lightbox').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();opener=a;const gallery=a.closest('.gallery');group=gallery?Array.from(gallery.querySelectorAll('a.lightbox')):[a];index=group.indexOf(a);displayImage();dialog.showModal();}));$('.lightbox-prev')?.addEventListener('click',()=>step(-1));$('.lightbox-next')?.addEventListener('click',()=>step(1));$('.lightbox-close').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});dialog.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();step(1);}if(e.key==='ArrowLeft'){e.preventDefault();step(-1);}});dialog.addEventListener('close',()=>{dialog.querySelector('img').removeAttribute('src');opener?.focus({preventScroll:true});});}
+if('IntersectionObserver'in window){const navObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){$$('.nav-links a').forEach(a=>{if(a.hash==='#'+e.target.id)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});}}),{rootMargin:'-20% 0px -60% 0px'});$$('main>section[id]').forEach(s=>navObserver.observe(s));}
 })();
