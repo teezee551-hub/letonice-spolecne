@@ -1420,3 +1420,111 @@ h2 {letter-spacing:-.035em;line-height:1.12}
 .lightbox-navigation[hidden] {display:none}
 .nav-links a[aria-current="location"] {color:var(--wine);text-decoration:underline;text-underline-offset:6px}
 @media(max-width:900px){.nav-inner{flex-wrap:nowrap;gap:.75rem}.brand{min-width:0}.nav-toggle{margin-left:auto;min-width:42px;min-height:42px}.nav nav{margin-left:0}}
+
+/* ============================================================
+   Aktualizace 7. 9. 2026: větší logo a písmo, čistší hero (fotka bez
+   překrývající karty), mapa přes celou šířku s barevnými body programu
+   a plochami z územního plánu, program v rozvržení 50 % text / 50 % obrázek.
+   ============================================================ */
+:root { --w-content: 1320px; }
+body { font-size: 1.125rem; }
+.section-lead { font-size: 1.2rem; max-width: 64ch; }
+
+/* logo a navigace */
+.brand-mark { width: 84px; height: 84px; box-shadow: 0 0 0 2px rgba(74, 11, 22, 0.15); }
+.brand { gap: 0.9rem; }
+.brand-name { font-size: 1.5rem; letter-spacing: 0.02em; }
+.brand-name small { font-size: 0.74rem; margin-top: 0.3rem; }
+.nav-inner { padding-block: 0.5rem; gap: 1.25rem; }
+section[id], details[id] { scroll-margin-top: 132px; }
+.footer-brand img { width: 64px; height: 64px; }
+
+/* hero: text vlevo, fotka vpravo bez překryvu */
+.hero { min-height: 720px; }
+.hero-inner { grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr); gap: 2rem; padding-block: 4.5rem 3rem; }
+.hero-copy { min-width: 0; }
+.hero-bg { width: 52%; object-position: 58% center; }
+.hero-shade { background: linear-gradient(90deg, #451220 0%, #451220 44%, rgba(69, 18, 32, 0.88) 48.5%, rgba(69, 18, 32, 0) 55%); }
+.hero-card { max-width: 560px; margin-top: 2.2rem; grid-template-columns: auto 1fr; gap: 1rem; align-items: start; border-radius: 12px; border-left: 6px solid #edc36d; }
+.hero-card .check { display: grid; width: 40px; height: 40px; }
+.hero-card p { font-size: 1.05rem; }
+
+/* mapa přes celou šířku */
+.program-layout { grid-template-columns: 1fr; gap: 2.4rem; }
+.map-panel { position: static; }
+.map-heading { padding: 1.2rem 1.4rem; }
+.map-heading h3 { font-size: 1.6rem; }
+.real-map { height: clamp(460px, 66vh, 760px); }
+.map-status { padding: 1rem 1.4rem 0.5rem; min-height: 0; font-weight: 600; }
+.map-legend { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0.4rem 1.4rem 0.6rem; }
+.map-legend button { display: inline-flex; align-items: center; gap: 0.55rem; font: 600 0.95rem var(--font-body); padding: 0.6rem 0.9rem; border: 1.5px solid var(--pc); background: #fff; color: var(--ink); border-radius: 999px; cursor: pointer; min-height: 44px; transition: background 0.15s, color 0.15s; }
+.map-legend .dot { width: 14px; height: 14px; border-radius: 50%; background: var(--pc); flex: none; }
+.map-legend button[aria-pressed="true"] { background: var(--pc); color: #fff; }
+.map-legend button.light[aria-pressed="true"] { color: var(--ink); }
+.map-legend button[aria-pressed="true"] .dot { background: #fff; }
+.map-legend button.light[aria-pressed="true"] .dot { background: var(--ink); }
+.map-sublist { display: flex; flex-wrap: wrap; gap: 0.45rem; padding: 0 1.4rem 1rem; }
+.map-sublist[hidden] { display: none; }
+.map-sublist button { font: 600 0.875rem var(--font-body); padding: 0.5rem 0.8rem; border: 1px solid #d9d1d3; border-left: 5px solid var(--pc); background: #fff; color: var(--ink); border-radius: 8px; cursor: pointer; min-height: 40px; text-align: left; }
+.map-sublist button[aria-pressed="true"] { background: var(--paper-2); border-color: var(--pc); }
+.map-caption { padding: 0.2rem 1.4rem 0.8rem; }
+.map-external { padding: 0 1.4rem 1.3rem; }
+.place-marker { background: transparent !important; border: 0 !important; box-shadow: none !important; font: 700 15px var(--font-body); transition: opacity 0.2s, transform 0.2s; }
+.place-marker b { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; border: 3px solid #fff; color: #fff; box-shadow: 0 3px 10px rgba(36, 21, 24, 0.45); }
+.place-marker.dark b { color: var(--ink); }
+.place-marker.approx b { border-style: dashed; }
+.place-marker.is-dim { opacity: 0.4; transform: scale(0.8); }
+.place-marker.is-active { z-index: 1000 !important; }
+.place-marker.is-active b { outline: 3px solid #edc36d; outline-offset: 1px; }
+.leaflet-popup-content { max-width: 280px; }
+.popup-approx { color: var(--ink-soft); font-size: 0.85em; }
+
+/* program: větší písmo, text a obrázek 50/50 */
+.program-item summary { padding: 1.4rem 1.4rem; min-height: 0; }
+.program-title { font-size: 1.32rem; line-height: 1.25; }
+.program-summary { font-size: 1rem; margin-top: 0.3rem; }
+.program-num { width: 34px; height: 34px; font-size: 1.05rem; }
+.program-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.4rem 2.6rem; padding: 0.4rem 1.4rem 1.6rem; font-size: 1.125rem; align-items: start; }
+.program-text { min-width: 0; }
+.program-points { gap: 0.7rem; margin-bottom: 1.1rem; }
+.program-points li { font-size: 1.125rem; line-height: 1.55; padding-left: 1.5rem; }
+.program-points li::before { top: 0.65em; }
+.program-body p { font-size: 1.05rem; }
+.program-quote { font-size: 1.12rem; }
+.program-figure { margin: 0; align-self: start; }
+.program-figure img { width: 100%; max-height: none; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; }
+.program-figure.plan img { aspect-ratio: 16 / 9; object-fit: contain; background: #fff; border: 1px solid var(--line); }
+.program-figure figcaption { font-size: 0.85rem; }
+
+@media (max-width: 1000px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-copy { max-width: 640px; }
+}
+@media (max-width: 900px) {
+  .brand-mark { width: 60px; height: 60px; }
+  .brand-name { font-size: 1.1rem; }
+  section[id], details[id] { scroll-margin-top: 100px; }
+  .hero-inner { padding-top: 4rem; }
+  .hero-bg { width: 100%; opacity: 0.5; object-position: 65% center; }
+  .hero-shade { background: linear-gradient(90deg, #451220f5, #45122080), linear-gradient(0deg, #451220, transparent); }
+  .hero-card { max-width: none; margin-top: 1.6rem; }
+  .real-map { height: 440px; }
+  .map-heading { padding: 1rem; }
+  .map-legend, .map-sublist { padding-inline: 1rem; }
+  .program-body { grid-template-columns: 1fr; padding: 0.2rem 1.1rem 1.3rem; gap: 1rem; }
+  .program-figure img { aspect-ratio: 16 / 10; }
+}
+@media (max-width: 520px) {
+  .brand-mark { width: 52px; height: 52px; }
+  .brand-name { font-size: 1rem; }
+  .brand-name small { font-size: 0.625rem; }
+  .hero-inner { padding-top: 3rem; }
+  .program-title { font-size: 1.1rem; }
+  .program-summary { font-size: 0.9rem; }
+  .real-map { height: 380px; }
+  .map-legend button { font-size: 0.875rem; padding: 0.5rem 0.7rem; }
+}
+@media print {
+  .map-legend, .map-sublist { display: none; }
+  .program-body { grid-template-columns: 1fr; }
+}
