@@ -45,7 +45,7 @@ window.LETONICE_MAP_DATA = {
     { id: "koupaliste", point: "6", name: "Areál bývalého koupaliště", note: "Bazény, volejbalové kurty a zázemí.", lat: 49.16755, lon: 16.96665, src: "https://www.openstreetmap.org/way/50942005", srcLabel: "Poloha v OpenStreetMap" },
     { id: "od", point: "6", name: "Obchodní dům (obchodní centrum)", note: "1. máje 72 – budova s prodejnou a obecní knihovnou.", lat: 49.176703, lon: 16.960824, src: "https://www.openstreetmap.org/way/166735125", srcLabel: "Poloha v OpenStreetMap" },
     { id: "h-nova", point: "6", name: "Dětské hřiště na Nové", approx: true, lat: 49.17420, lon: 16.96076, src: "https://www.letonice.cz/detska-hriste", srcLabel: "Dětská hřiště na webu obce" },
-    { id: "h-mezirka", point: "6", name: "Dětské hřiště v Mezírce", approx: true, lat: 49.17660, lon: 16.95920, src: "https://www.letonice.cz/detska-hriste", srcLabel: "Dětská hřiště na webu obce" },
+    { id: "h-mezirka", point: "6", name: "Dětské hřiště v Mezírce", note: "Mezírka = pěšina mezi domy č. 610 a 440, spojuje ulice Nová a 9. května (upřesněno zadavatelem 11. 9. 2026).", lat: 49.173825, lon: 16.962102, src: "https://www.openstreetmap.org/way/170697300", srcLabel: "Pěšina v OpenStreetMap" },
     { id: "h-fotbal", point: "6", name: "Dětské hřiště za fotbalovým hřištěm", approx: true, lat: 49.17395, lon: 16.96700, src: "https://www.letonice.cz/detska-hriste", srcLabel: "Dětská hřiště na webu obce" },
 
     /* 7 · zelená */

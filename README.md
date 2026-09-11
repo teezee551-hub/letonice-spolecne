@@ -19,10 +19,10 @@ Aktualizace 11. září 2026. Statický web bez formuláře a bez ukládání os
 - `program.html` a `assets/program.pdf` přegenerovány se stejnými podbody.
 
 ## Změny 11. 9. 2026 večer – hlavička
-- Zrušeno zmenšování hlavičky po odscrollování (třída `.nav.compact` a její JS odstraněny). Logo je trvale 150 px (tablet 96 px, mobil 80 px) s vínovým a bílým prstencem a stínem, název vedle loga větší. `scroll-margin-top` kotev zvýšen na 180/120/104 px. Verze CSS/JS `?v=20260911b`.
+- Zrušeno zmenšování hlavičky po odscrollování (třída `.nav.compact` a její JS odstraněny). Logo je trvale 150 px (tablet 96 px, mobil 80 px) s vínovým a bílým prstencem a stínem, název vedle loga větší. `scroll-margin-top` kotev zvýšen na 180/120/104 px. Verze CSS/JS `?v=20260911c` (po upřesnění polohy hřiště v Mezírce).
 
 ## K ověření zadavatelem (orientační polohy)
-- Dětská hřiště „na Nové“, „v Mezírce“ a „za fotbalovým hřištěm“ – web obce uvádí hřiště v ulicích Nová, U Zbrojnice a 9. května; přesné souřadnice upravte v `assets/data/mapa-letonice.js` (pole `lat`, `lon`, poté smazat `approx: true`).
+- Dětská hřiště „na Nové“ a „za fotbalovým hřištěm“ – web obce uvádí hřiště v ulicích Nová, U Zbrojnice a 9. května; přesné souřadnice upravte v `assets/data/mapa-letonice.js` (pole `lat`, `lon`, poté smazat `approx: true`). Hřiště „v Mezírce“ je od 11. 9. 2026 umístěno přesně: střed pěšiny mezi domy č. 610 a 440 (OSM way 170697300, spojuje Novou a 9. května) podle upřesnění zadavatele.
 - Zahrádkáři a Český červený kříž nemají veřejně uvedenou vlastní budovu, značky jsou u obecního domu.
 - Plocha bydlení B5 nebyla ve výkresech ÚP nalezena (ve výřezu ani v hlavním výkrese).
 
