@@ -18,6 +18,9 @@ Aktualizace 11. září 2026. Statický web bez formuláře a bez ukládání os
 - Podbody programu sjednoceny s grafikami 1, 2, 4, 5 a 7 z podkladů „VOLBY 2026“. Bod 6 zůstává podle programu v DOCX – grafika 6.png má omylem podbody bodu 5. Bod 3 nemá grafiku, zůstal podle DOCX. Rozvržení každého bodu 50 % text / 50 % obrázek; bod 5 má jako obrázek výřez z územního plánu (`assets/img/uzemni-plan-vyrez.jpg`).
 - `program.html` a `assets/program.pdf` přegenerovány se stejnými podbody.
 
+## Změny 11. 9. 2026 večer – hlavička
+- Zrušeno zmenšování hlavičky po odscrollování (třída `.nav.compact` a její JS odstraněny). Logo je trvale 150 px (tablet 96 px, mobil 80 px) s vínovým a bílým prstencem a stínem, název vedle loga větší. `scroll-margin-top` kotev zvýšen na 180/120/104 px. Verze CSS/JS `?v=20260911b`.
+
 ## K ověření zadavatelem (orientační polohy)
 - Dětská hřiště „na Nové“, „v Mezírce“ a „za fotbalovým hřištěm“ – web obce uvádí hřiště v ulicích Nová, U Zbrojnice a 9. května; přesné souřadnice upravte v `assets/data/mapa-letonice.js` (pole `lat`, `lon`, poté smazat `approx: true`).
 - Zahrádkáři a Český červený kříž nemají veřejně uvedenou vlastní budovu, značky jsou u obecního domu.

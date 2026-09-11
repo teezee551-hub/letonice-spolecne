@@ -6,7 +6,6 @@ const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const toggle=$('.nav-toggle'),menu=$('#nav-menu');
 function closeMenu(){if(!toggle||!menu)return;menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Otevřít menu');}
 if(toggle&&menu){toggle.addEventListener('click',()=>{const open=menu.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Zavřít menu':'Otevřít menu');});menu.addEventListener('click',e=>{if(e.target.closest('a'))closeMenu();});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.classList.contains('open')){closeMenu();toggle.focus();}});document.addEventListener('click',e=>{if(!e.target.closest('.nav'))closeMenu();});}
-const nav=$('.nav');function compactNav(){if(nav)nav.classList.toggle('compact',window.scrollY>80);}if(nav){window.addEventListener('scroll',compactNav,{passive:true});compactNav();}
 const start=Date.parse('2026-10-09T14:00:00+02:00'),finish=Date.parse('2026-10-10T14:00:00+02:00');
 function tick(){if(!$('#cd-days'))return;const diff=Math.max(0,start-Date.now());$('#cd-days').textContent=Math.floor(diff/86400000);$('#cd-hours').textContent=Math.floor(diff/3600000)%24;$('#cd-mins').textContent=Math.floor(diff/60000)%60;if(Date.now()>=start){$('#countdown').innerHTML='<p class="election-state">'+(Date.now()<finish?'Probíhají volební dny':'Hlasování skončilo')+'</p>';clearInterval(timer);}}
 let timer=setInterval(tick,30000);tick();

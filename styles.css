@@ -1434,19 +1434,25 @@ body { font-size: 1.125rem; }
 .section-lead { font-size: 1.2rem; max-width: 64ch; }
 
 /* logo a navigace */
-.brand-mark { width: 120px; height: 120px; box-shadow: 0 0 0 2px rgba(74, 11, 22, 0.15); transition: width 0.25s, height 0.25s; }
-.brand { gap: 1rem; }
-.brand-name { font-size: 2rem; line-height: 0.95; letter-spacing: 0.02em; transition: font-size 0.25s; }
+/* hlavička se při scrollu nezmenšuje – logo je trvale velké a výrazné */
+.brand-mark { width: 150px; height: 150px; background: #fff; box-shadow: 0 0 0 3px var(--wine), 0 0 0 7px #fff, 0 6px 18px rgba(74, 11, 22, 0.22); }
+.brand { gap: 1.35rem; }
+.brand-name { font-size: 2.45rem; line-height: 0.92; letter-spacing: 0.02em; }
 .brand-l1, .brand-l2 { display: block; }
 .brand-l1 { color: var(--ink); }
 .brand-l2 { color: var(--wine); }
-.brand-name small { font-size: 0.78rem; margin-top: 0.45rem; }
-.nav-inner { padding-block: 0.5rem; gap: 1.25rem; }
-/* po odscrollování se hlavička zmenší, aby nezabírala místo */
-.nav.compact .brand-mark { width: 60px; height: 60px; }
-.nav.compact .brand-name { font-size: 1.15rem; }
-.nav.compact .brand-name small { margin-top: 0.2rem; font-size: 0.66rem; }
-section[id], details[id] { scroll-margin-top: 96px; }
+.brand-name small { font-size: 0.82rem; margin-top: 0.5rem; }
+.nav-inner { padding-block: 0.75rem; gap: 1.25rem; }
+section[id], details[id] { scroll-margin-top: 180px; }
+/* vyrazne tlacitko na PDF program */
+.btn-gold { background: var(--gold); color: var(--wine-deep); border-color: var(--gold-deep); box-shadow: 0 10px 24px -8px rgba(185, 130, 12, 0.75); }
+.btn-gold:hover { background: #f0b73f; box-shadow: 0 14px 28px -8px rgba(185, 130, 12, 0.8); }
+.btn-gold svg { flex: none; }
+.btn-lg { font-size: 1.15rem; padding: 1.05rem 2rem; }
+.nav-inner > .btn-pdf { font-size: 1.05rem; padding: 0.9rem 1.5rem; }
+.hero-ctas .btn-gold { animation: pdf-pulse 2.4s ease-in-out 1s 3; }
+@keyframes pdf-pulse { 0%,100% { transform: none; } 50% { transform: scale(1.04); } }
+@media (prefers-reduced-motion: reduce) { .hero-ctas .btn-gold { animation: none; } }
 .footer-brand img { width: 72px; height: 72px; }
 
 /* hero: text vlevo, fotka vpravo bez překryvu */
@@ -1511,11 +1517,9 @@ section[id], details[id] { scroll-margin-top: 96px; }
   .hero-copy { max-width: 640px; }
 }
 @media (max-width: 900px) {
-  .brand-mark { width: 80px; height: 80px; }
-  .brand-name { font-size: 1.35rem; }
-  .nav.compact .brand-mark { width: 48px; height: 48px; }
-  .nav.compact .brand-name { font-size: 1rem; }
-  section[id], details[id] { scroll-margin-top: 84px; }
+  .brand-mark { width: 96px; height: 96px; box-shadow: 0 0 0 2px var(--wine), 0 0 0 5px #fff, 0 4px 12px rgba(74, 11, 22, 0.2); }
+  .brand-name { font-size: 1.5rem; }
+  section[id], details[id] { scroll-margin-top: 120px; }
   .hero-inner { padding-top: 4rem; }
   .hero-bg { width: 100%; opacity: 0.5; object-position: 65% center; }
   .hero-shade { background: linear-gradient(90deg, #451220f5, #45122080), linear-gradient(0deg, #451220, transparent); }
@@ -1527,9 +1531,10 @@ section[id], details[id] { scroll-margin-top: 96px; }
   .program-figure img { aspect-ratio: 16 / 10; }
 }
 @media (max-width: 520px) {
-  .brand-mark { width: 68px; height: 68px; }
-  .brand-name { font-size: 1.15rem; }
+  .brand-mark { width: 80px; height: 80px; }
+  .brand-name { font-size: 1.2rem; }
   .brand-name small { font-size: 0.625rem; }
+  section[id], details[id] { scroll-margin-top: 104px; }
   .hero-inner { padding-top: 3rem; }
   .program-title { font-size: 1.1rem; }
   .program-summary { font-size: 0.9rem; }
