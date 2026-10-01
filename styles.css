@@ -829,7 +829,7 @@ svg.town-map.has-active .map-pin:not(.active) { opacity: 0.35; }
 
 .gallery a { display: block; border-radius: var(--radius-sm); overflow: hidden; background: var(--paper-2); }
 
-.gallery img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform 0.4s ease; }
+.gallery img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; transition: transform 0.4s ease; }
 
 .gallery a:hover img { transform: scale(1.04); }
 
@@ -1545,3 +1545,8 @@ section[id], details[id] { scroll-margin-top: 180px; }
   .map-legend, .map-sublist { display: none; }
   .program-body { grid-template-columns: 1fr; }
 }
+
+/* galerie koupaliště bez popisek (ilustrační fotky, 2026-10-01) */
+.gallery-plain { margin-bottom: 2.4rem; }
+.ballot-party .box:empty::after { content: ""; }
+.gallery-plain img { height: auto; aspect-ratio: 3 / 2; }

@@ -1,7 +1,15 @@
 # LETONICE SPOLEČNĚ · web 2026
 
-Aktualizace 11. září 2026. Statický web bez formuláře a bez ukládání osobních údajů.
+Aktualizace 1. října 2026. Statický web bez formuláře a bez ukládání osobních údajů.
 
+## Změny 1. 10. 2026 (podklady od Jana Ježorka + aktuální letáky)
+- Sekce Koupaliště podle návrhu „Opravit3“: galerie „Jak to bylo“ = 8 nových fotek ve dvou řadách po čtyřech, **bez popisek** (ilustrační). Inspirace odjinud = Mokrák, Bystřice, Uhřice, Vsetín (bez popisek), starší vizualizace odstraněna; doplněna věta „Z takových a jim podobných variant chceme vycházet.“ Nahrazené staré fotky z repa smazány.
+- Přepínač u plánku: „Preferovaná varianta“ + „Areál kolem roku 1970“ (letecký snímek z doby dokončování).
+- Jméno Jana Ježorka odstraněno z popisků pod plánkem (v samotném plánku zůstává). U jeho citátu jen „Jan Ježorek · kandidát č. 5“.
+- Jak volit: neutrální výklad bez veřejného doporučování „celé kandidátky“ (přání zadavatele); ukázka lístku bez křížku. Stejně upravena titulní strana PDF.
+- Bod 3 programu podle nové grafiky (podbody i citát). PDF přegenerováno (4 strany).
+- Kandidát č. 12 Jaroslav Lučan – fotografie; motta všech kandidátů podle letáku kandidátky (na webu, v PDF jen původní).
+- Hero a kostel nahrazeny čistšími verzemi stejných záběrů; leták „Naše priority“ nahrazen aktuální verzí. Verze CSS/JS `?v=20261001`.
 ## Změny 11. 9. 2026 (podklady od Jana Ježorka)
 - Bod 6 programu přepsán podle dokumentu „Koupaliště web upravit.doc“ (červený text = nová verze): nový podtitul, tři podbody i citát. Stejně upraven `program.html` a přegenerováno `assets/program.pdf` (headless Edge, `--print-to-pdf`).
 - Sekce Koupaliště: nový úvod; přepínač má jen dvě karty – **Preferovaná varianta** (výchozí, nová vizualizace „Sportovně rekreační areál Letonice – konceptní návrh“, `assets/img/koupaliste-studie-2030.jpg` 1600 px pro zobrazení, `…-full.jpg` 2200 px pro lightbox) a **Ze vzpomínek**. Karta „Studie 2021“ odstraněna, vizualizace DIMENSE zůstává v galerii Inspirace odjinud. Bod 6 v programu má jako obrázek novou vizualizaci.
@@ -49,6 +57,6 @@ Termín voleb: https://mv.gov.cz/volby/clanek/volby-do-zastupitelstev-obci-a-sen
 Leaflet 1.9.4: https://leafletjs.com (BSD-2-Clause, licence v assets/vendor/leaflet/LICENSE)
 
 ## K doplnění zadavatelem
-Ověřený e-mail/telefon; vlastní doména; fotografie kandidáta č. 12 (Jaroslav Lučan). Přesná volební místnost je odkázána na oznámení obce. Historická datace fotografií převzata z původních dodaných názvů, autorství a publikační oprávnění eviduje zadavatel.
+Ověřený e-mail/telefon; vlastní doména; Přesná volební místnost je odkázána na oznámení obce. Historická datace fotografií převzata z původních dodaných názvů, autorství a publikační oprávnění eviduje zadavatel.
 
 Mapové dlaždice se načítají z OpenStreetMap, písma z Google Fonts. Web nemá analytiku ani sledovací cookies.
