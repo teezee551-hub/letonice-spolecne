@@ -3,6 +3,7 @@
 Aktualizace 1. října 2026. Statický web bez formuláře a bez ukládání osobních údajů.
 
 ## Změny 1. 10. 2026 (podklady od Jana Ježorka + aktuální letáky)
+- Z mapy odstraněni lodní modeláři (Midway Mini Navy Club už neexistuje).
 - Sekce Koupaliště podle návrhu „Opravit3“: galerie „Jak to bylo“ = 8 nových fotek ve dvou řadách po čtyřech, **bez popisek** (ilustrační). Inspirace odjinud = Mokrák, Bystřice, Uhřice, Vsetín (bez popisek), starší vizualizace odstraněna; doplněna věta „Z takových a jim podobných variant chceme vycházet.“ Nahrazené staré fotky z repa smazány.
 - Přepínač u plánku: „Preferovaná varianta“ + „Areál kolem roku 1970“ (letecký snímek z doby dokončování).
 - Jméno Jana Ježorka odstraněno z popisků pod plánkem (v samotném plánku zůstává). U jeho citátu jen „Jan Ježorek · kandidát č. 5“.
@@ -21,7 +22,7 @@ Aktualizace 1. října 2026. Statický web bez formuláře a bez ukládání oso
 - Velké logo v hlavičce (120 px, na mobilu 80/68 px) s dvouřádkovým názvem LETONICE / SPOLEČNĚ jako na letáku; po odscrollování o více než 80 px se hlavička zmenší (třída `.nav.compact`, logo 60 px), aby nezabírala místo. Větší logo i v patičce, větší základní písmo webu. Odkazy na CSS/JS mají `?v=…` proti staré cache prohlížeče (po další úpravě verzi změnit; `build.cjs` query ignoruje).
 - Body programu obsahují **pouze to, co je na letácích**: název, podbody s krátkým popisem a citát (žádné další odstavce). Odkazy na územní plán a na sekci Koupaliště jsou jen v popiscích fotek.
 - Hero: karta „Zachováme, co funguje“ přesunuta pod text do levého sloupce, fotka Letonic vpravo už není překrytá; hero fotky zostřeny a odmlženy (originály v `assets/img/_orig/`).
-- Mapa přes celou šířku sekce Program. Barevné body programu: 1 hnědá (obecní úřad), 2 červená (spolky: Orel/Orlovna, SDH/zbrojnice, TJ/hřiště, myslivci/chata, rybáři a lodní modeláři/Šmolesy, zahrádkáři, ČČK), 3 žlutá (ZŠ, MŠ), 5 fialová (plochy bydlení B1–B14 a B101 z územního plánu jako polygony), 6 modrá (areál koupaliště, obchodní dům, tři dětská hřiště), 7 zelená (NPR Větrníky s hranicí, náves, hřbitov).
+- Mapa přes celou šířku sekce Program. Barevné body programu: 1 hnědá (obecní úřad), 2 červená (spolky: Orel/Orlovna, SDH/zbrojnice, TJ/hřiště, myslivci/chata, rybáři/Šmolesy, zahrádkáři, ČČK), 3 žlutá (ZŠ, MŠ), 5 fialová (plochy bydlení B1–B14 a B101 z územního plánu jako polygony), 6 modrá (areál koupaliště, obchodní dům, tři dětská hřiště), 7 zelená (NPR Větrníky s hranicí, náves, hřbitov).
 - Všechna data mapy jsou v `assets/data/mapa-letonice.js` (`approx:true` = orientační poloha, značka má čárkovaný okraj). Polygony ploch bydlení jsou přeneseny z výkresů ÚP (koordinační výkres O3 1:2000 a hlavní výkres 1:5000), přesnost cca ±15 m.
 - Podbody programu sjednoceny s grafikami 1, 2, 4, 5 a 7 z podkladů „VOLBY 2026“. Bod 6 zůstává podle programu v DOCX – grafika 6.png má omylem podbody bodu 5. Bod 3 nemá grafiku, zůstal podle DOCX. Rozvržení každého bodu 50 % text / 50 % obrázek; bod 5 má jako obrázek výřez z územního plánu (`assets/img/uzemni-plan-vyrez.jpg`).
 - `program.html` a `assets/program.pdf` přegenerovány se stejnými podbody.
