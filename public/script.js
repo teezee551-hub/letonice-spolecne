@@ -1,3 +1,5 @@
+/* stará adresa na GitHub Pages -> vlastní doména */
+if(location.hostname.endsWith('github.io')){location.replace('https://letonicespolecne.cz/'+location.hash);}
 /* LETONICE SPOLEČNĚ — accessible, progressively enhanced interactions. */
 (function(){
 'use strict';
