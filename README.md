@@ -1,6 +1,50 @@
-# LETONICE SPOLEČNĚ · web 2026
+# LETONICE SPOLEČNĚ · volební web 2026
 
-Aktualizace 1. října 2026. Statický web bez formuláře a bez ukládání osobních údajů.
+Statický web sdružení nezávislých kandidátů LETONICE SPOLEČNĚ pro komunální volby 9.–10. 10. 2026.
+Běží na **https://letonicespolecne.cz/** (Cloudflare Workers se statickými soubory, nástupce Cloudflare Pages).
+Žádný framework, žádný build krok, žádné cookies, analytika ani externí fonty.
+
+## Struktura
+- `public/` – celý web, který se nasazuje (`index.html`, `program.html` pro tisk, `404.html`, `styles.css`, `script.js`, `assets/`, `_headers`, `robots.txt`, `sitemap.xml`, `og.jpg`, `favicon.ico`).
+- `public/_headers` – bezpečnostní hlavičky (CSP, X-Frame-Options, Referrer-Policy, Permissions-Policy, HSTS) a cachování.
+- `worker/index.js` – jediná logika: přesměrování `www` → holá doména a `http` → `https` (301). Ostatní obsluhují statické soubory.
+- `wrangler.jsonc` – konfigurace nasazení včetně vlastních domén letonicespolecne.cz a www.letonicespolecne.cz.
+- `archiv-podkladu/` – nepoužité fotky, nenasazují se.
+- `index.html` v kořeni repa – jen přesměrování ze staré adresy na GitHub Pages.
+
+## Aktualizace webu jedním příkazem
+Upravte soubory v `public/` a spusťte v kořeni repa:
+
+```
+npm run deploy
+```
+
+Poprvé na novém počítači: `npm install` a `npx wrangler login` (otevře prohlížeč s přihlášením do Cloudflaru).
+Bez prohlížeče lze místo přihlášení nastavit proměnnou prostředí `CLOUDFLARE_API_TOKEN` s tokenem z dashboardu
+(My Profile → API Tokens → šablona „Edit Cloudflare Workers“). Token nikdy neukládejte do repa.
+
+Po změně `styles.css` nebo `script.js` zvyšte v `public/index.html` parametr `?v=…`, ať se nová verze načte i lidem s cache.
+Lokální náhled se stejnými hlavičkami: `npm run dev` → http://127.0.0.1:8787
+
+Tiskové PDF programu (`public/assets/program.pdf`) se generuje z `public/program.html` přes headless Chrome:
+
+```
+chrome --headless=new --no-pdf-header-footer --print-to-pdf=public/assets/program.pdf public/program.html
+```
+
+## Volitelně: e-mail info@letonicespolecne.cz (Cloudflare Email Routing, zdarma)
+1. Dashboard Cloudflare → doména letonicespolecne.cz → **Email** → **Email Routing** → **Get started / Enable**.
+2. Cloudflare nabídne přidání MX a TXT (SPF) záznamů → **Add records and enable**.
+3. **Destination addresses** → přidat svůj osobní e-mail → potvrdit odkaz, který na něj přijde.
+4. **Routing rules** → **Create address** → `info` → akce *Send to an email* → vybrat ověřenou adresu → **Save**.
+5. Otestovat: poslat e-mail na info@letonicespolecne.cz. Odpovídá se ze svého osobního e-mailu.
+
+# Historie změn
+
+## Změny 3. 10. 2026 – přechod na vlastní doménu
+- Web přesunut do `public/` a nasazen na Cloudflare (letonicespolecne.cz, www přesměrovává). Fonty hostované lokálně, obrázky ve WebP s rozměry, doplněny canonical, Open Graph, Twitter Card, og.jpg 1200×630, favicon.ico, 404, robots.txt, sitemap.xml a `_headers`.
+- Sekce Koupaliště označena jako „Podrobněji k bodu 6 programu“ s odkazem zpět na bod 6.
+- Bod 1 programu má fotku pohledu na Letonice z letáku. Z mapy odstraněni lodní modeláři.
 
 ## Změny 1. 10. 2026 (podklady od Jana Ježorka + aktuální letáky)
 - Z mapy odstraněni lodní modeláři (Midway Mini Navy Club už neexistuje).
@@ -35,9 +79,6 @@ Aktualizace 1. října 2026. Statický web bez formuláře a bez ukládání oso
 - Zahrádkáři a Český červený kříž nemají veřejně uvedenou vlastní budovu, značky jsou u obecního domu.
 - Plocha bydlení B5 nebyla ve výkresech ÚP nalezena (ve výřezu ani v hlavním výkrese).
 
-## Spuštění
-`npm run dev` – náhled na http://127.0.0.1:8080
-`npm run build` – kontrola obou stránek, odkazů, kotev a syntaxe JS; vytvoření veřejného výstupu dist.
 
 ## Úpravy
 - Skutečná mapa OpenStreetMap s ověřenými polohami úřadu, fotbalového hřiště, ZŠ a volejbalových kurtů u koupaliště. Bod bydlení nezobrazuje neověřené pozemky.
